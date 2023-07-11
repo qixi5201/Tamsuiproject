@@ -1,0 +1,270 @@
+{% import "bootstrap/wtf.html" as wtf %}
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FFCGET6HE8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FFCGET6HE8');
+</script>
+		<title>淡水旅行手札-淡水禮拜堂</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/main.css" />
+		<link rel="stylesheet" href="/lib/w3.css">
+
+		<style>
+			html {
+					scroll-behavior: smooth;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+						<article class="post">
+							<header>
+								<div class="title">
+									<h2>淡水禮拜堂</h2>
+									<h3>帶有濃濃的懷舊風，百年古鐘與古風琴</h3>
+								</div>
+							
+							</header>
+							<span class="image main" style="padding:5px 5px; width: calc(100%);">
+								<div class="w3-content" style="max-width:800px">
+									<img class="mySlides" src="static/images/淡水禮拜堂3.jpg" style="width:100%">
+									<img class="mySlides" src="static/images/滬尾偕醫館2.jpg" style="width:100%">
+								</div>
+								  <div class="w3-center" style="margin-top: 20px;">
+									<center>
+									<button class="w3-btn demo" onclick="currentDiv(1)">1</button> 
+									<button class="w3-btn demo" onclick="currentDiv(2)">2</button> 
+									</center>
+								  </div>
+							</span>								<span >
+								<p>淡水禮拜堂是位在淡水馬偕街的教堂設施，在1998年經內政部評定為三級古蹟，現今是新北市市定古蹟。馬偕牧師於1872年抵達淡水後就積極地傳教，同時也學習閩南語和地方文化，而當時租的房子就是做為醫院和傳教的地方，雖然過程中經歷了許多挫折，但最終讓教會分布了整個北台灣。淡水禮拜堂建築是仿哥德式的尖塔，屋頂大跨距的鐵骨承托住，再以木板作為天花板，左邊是高聳的鐘塔。1986年全面翻修，教堂正面有聖父、聖子、聖靈三位一體，鐘樓則是五餅二魚及客西馬尼禱告的基督教義，現教堂配和淡水風景，成為有名的觀光景點。
+
+
+								</p>
+							</span>
+							<div class="iframe-rwd">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.9258850237156!2d121.43635141484482!3d25.171980283907946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a55a6e17ddb7%3A0x7a11a0ddd8353a78!2z6Ie654Gj5Z-6552j6ZW36ICB5pWZ5pyD5reh5rC05pWZ5pyD!5e0!3m2!1szh-TW!2stw!4v1657957355112!5m2!1szh-TW!2stw" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							</div><footer>
+
+								
+								<ul class="actions">
+									<br>
+								</ul>
+							
+								<ul class="stats">
+									<li><a href="#">景點</a></li>
+									
+									
+								</ul>
+							</footer>
+						</article>
+						<article class="post">
+							<header>
+								<div class="title">
+									<h2>留言區</h2>
+									<h3>說說你的想法</h3>
+								</div>
+							
+							</header>
+							<form method="post" >
+								{{ wtf.quick_form(form) }}
+							</form>
+							
+							
+						</article>
+
+						<article class="post">
+							<header>
+								<div class="title">
+									<center>
+										<h2>留言版</h2>
+									</center>
+								</div>
+							
+							</header>
+						{% for item in messages%}
+						<p>
+							{{  item.name }}<br>
+							{{  item.body }}<br>
+							{{  item.timestamp }}<br></p>
+							<hr>
+						{% endfor %}
+						{% with messages = get_flashed_messages() %}
+						{% if messages %}
+						<ul class="flash">
+							{% for message in messages %}
+								<li>{{ message }}</li>
+								
+							{% endfor %}
+						</ul>
+						{% endif %}
+						{% endwith %}
+						</article>
+					</div>
+
+				<!-- Sidebar -->
+					<section id="sidebar">
+
+						<!-- Intro -->
+							<section id="intro">
+								
+								<header>
+									<h2><a href="{{ url_for('index') }}" >淡水旅行手札</a></h2>
+								
+								</header>
+							</section>
+
+						<!-- Mini Posts -->
+						<section>
+							<div class="mini-posts">
+								<h2>附近景點</h2>
+								<!-- Mini Post -->
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot2_11') }}">滬尾偕醫館</a></h3>
+											<p>距離27公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot2_11') }}" class="image"><img src="static/images/滬尾偕醫館.jpg" alt="" /></a>
+									</article>
+
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot3_16') }}">英國奶奶Britshake淡水</a></h3>
+											<p>距離56公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot3_16') }}" class="image"><img src="static/images/英國奶奶Britshake淡水1.jpg" alt="" /></a>
+									</article>
+
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot4_8') }}">好食寨  </a></h3>
+											<p>距離59公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot4_8') }}" class="image"><img src="static/images/好食寨.jpg" alt="" /></a>
+									</article>
+
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot1_1') }}">木下靜涯舊居</a></h3>
+											<p>距離114公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot1_1') }}" class="image"><img src="static/images/木下靜涯舊居1.jpg" alt="" /></a>
+									</article>
+									
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot3_4') }}">紅樓咖啡館Rc1899 Café</a></h3>
+											<p>距離127公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot3_4') }}" class="image"><img src="static/images/紅樓咖啡館Rc1899 Café1.jpg" alt="" /></a>
+									</article>
+								
+							</div>
+						</section>
+						
+						<!-- Footer -->
+							<section id="footer">
+								<ul class="icons">
+									<li><a href="https://www.facebook.com/tamsuiproject" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/tamsuiproject/"  target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<a href="#top" class=" button large " id="BackTop">最上面</a>
+								</ul>
+								
+								<p >專題於2022年製作</p>
+							</section>
+
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/browser.min.js"></script>
+			<script src="static/js/breakpoints.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js"></script>
+			<script>
+				var imgArray = [
+				'https://drive.google.com/uc?export=view&id=1DDu9Ffj4pVZEZpT2R6BPeEvmphhNJZJ4',
+			],
+				curIndex = 0;
+				imgDuration = 3000;
+			
+			function slideShow() {
+				document.getElementById('slider').className += "fadeOut";
+				setTimeout(function() {
+					document.getElementById('slider').src = imgArray[curIndex];
+					document.getElementById('slider').className = "";
+				},1000);
+				curIndex++;
+				if (curIndex == imgArray.length) { curIndex = 0; }
+				setTimeout(slideShow, imgDuration);
+			}
+			slideShow();
+		</script>
+		 <script>
+            $(function(){
+                $('#BackTop').click(function(){ 
+                    $('html,body').animate({scrollTop:0}, 333);
+                });
+                $(window).scroll(function() {
+                    if ( $(this).scrollTop() > 300 ){
+                        $('#BackTop').fadeIn(222);
+                    } else {
+                        $('#BackTop').stop().fadeOut(222);
+                    }
+                }).scroll();
+            });
+        </script>
+		
+<script>
+	var slideIndex = 1;
+	showDivs(slideIndex);
+	
+	function plusDivs(n) {
+	  showDivs(slideIndex += n);
+	}
+	
+	function currentDiv(n) {
+	  showDivs(slideIndex = n);
+	}
+	
+	function showDivs(n) {
+	  var i;
+	  var x = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("demo");
+	  if (n > x.length) {slideIndex = 1}    
+	  if (n < 1) {slideIndex = x.length} ;
+	  for (i = 0; i < x.length; i++) {
+		 x[i].style.display = "none";  
+	  }
+	  for (i = 0; i < dots.length; i++) {
+		 dots[i].className = dots[i].className.replace(" w3-red", "");
+	  }
+	  x[slideIndex-1].style.display = "block";  
+	  dots[slideIndex-1].className += " w3-red";
+		}
+	</script>
+	</body>
+</html>

@@ -1,0 +1,279 @@
+{% import "bootstrap/wtf.html" as wtf %}
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FFCGET6HE8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FFCGET6HE8');
+</script>
+		<title>淡水旅行手札-淡水福佑宮&淡水彩繪階梯3D意象</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/main.css" />
+		<link rel="stylesheet" href="/lib/w3.css">
+		<style>
+			html {
+					scroll-behavior: smooth;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+						<article class="post">
+							<header>
+								<div class="title">
+									<h2>淡水福佑宮&淡水彩繪階梯3D意象</h2>
+									<h3>淡水媽祖宮保佑你</h3>
+								</div>
+							
+							</header>
+
+
+							<span class="image main" style="padding:5px 5px; width: calc(100%);">
+								<div class="w3-content" style="max-width:800px">
+									<img class="mySlides" src="static/images/淡水福佑宮_淡水彩繪階梯3D意象3.jpg" style="width:100%">
+									<img class="mySlides" src="static/images/淡水福佑宮_淡水彩繪階梯3D意象1.jpg" style="width:100%">
+									<img class="mySlides" src="static/images/淡水福佑宮_淡水彩繪階梯3D意象2.jpg" style="width:100%">
+								 
+								</div>	
+								<div class="w3-center" style="margin-top: 20px;">
+									<center>
+									<button class="w3-btn demo" onclick="currentDiv(1)">1</button> 
+									<button class="w3-btn demo" onclick="currentDiv(2)">2</button> 
+									<button class="w3-btn demo" onclick="currentDiv(3)">3</button> 
+			 
+									</center>
+								  </div>
+							</span>								<span >
+								<p>淡水福佑宮又稱淡水媽祖廟，主祀天上聖母媽祖，是新北市三級古蹟，與淡水清水巖、淡水龍山寺、淡水鄞山寺合稱為淡水四大廟。淡水福佑宮已有200以上歷史，是淡水最早草創的廟宇，福佑宮面對淡水河，希望船隻能夠出入平安。日後，新興的市街以福佑宮為中心開始發展，配合中正街整體風貌再現。福佑宮在前殿之後有一亭，具有拜亭和戲台的功能，這種建築形式全台只有鹿港龍山寺和淡水福佑宮才有。除建築特別以外，題材豐富的雕刻也是特色之一，在建築史和藝術史上福佑宮具有重要研究價值。在福佑宮旁，在合庫銀行斜對面巷子進去，有一整片的彩繪階梯，畫出各個淡水的景點，來參觀彩繪階梯的人並不會很多，可以輕易地拍下整片階梯。這個彩繪階梯是福佑宮找專業團隊來製作，將淡水的景點包括關渡大橋、淡水舢舨船還有淡水夕照等等。在參觀福佑宮的時候也可以順便到此欣賞一下整片彩繪階梯的藝術。
+
+
+								</p>
+							</span>
+							<div class="iframe-rwd">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.975684052944!2d121.4377471148448!3d25.170298883908668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a5598775bae1%3A0xfe930578a0776f7f!2z5reh5rC056aP5L2R5a6u!5e0!3m2!1szh-TW!2stw!4v1657957111173!5m2!1szh-TW!2stw" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							</div><footer>
+
+								
+								<ul class="actions">
+									<br>
+								</ul>
+							
+								<ul class="stats">
+									<li><a href="#">景點</a></li>
+									
+									
+								</ul>
+							</footer>
+						</article>
+						<article class="post">
+							<header>
+								<div class="title">
+									<h2>留言區</h2>
+									<h3>說說你的想法</h3>
+								</div>
+							
+							</header>
+							<form method="post" >
+								{{ wtf.quick_form(form) }}
+							</form>
+							
+							
+						</article>
+
+						<article class="post">
+							<header>
+								<div class="title">
+									<center>
+										<h2>留言版</h2>
+									</center>
+								</div>
+							
+							</header>
+						{% for item in messages%}
+						<p>
+							{{  item.name }}<br>
+							{{  item.body }}<br>
+							{{  item.timestamp }}<br></p>
+							<hr>
+						{% endfor %}
+						{% with messages = get_flashed_messages() %}
+						{% if messages %}
+						<ul class="flash">
+							{% for message in messages %}
+								<li>{{ message }}</li>
+								
+							{% endfor %}
+						</ul>
+						{% endif %}
+						{% endwith %}
+						</article>
+					</div>
+
+				<!-- Sidebar -->
+					<section id="sidebar">
+
+						<!-- Intro -->
+							<section id="intro">
+								
+								<header>
+									<h2><a href="{{ url_for('index') }}" >淡水旅行手札</a></h2>
+								
+								</header>
+							</section>
+
+						<!-- Mini Posts -->
+						<section>
+							<div class="mini-posts">
+								<h2>附近景點</h2>
+								<!-- Mini Post -->
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot3_17') }}">P Cafe</a></h3>
+											<p>距離47公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot3_17') }}" class="image"><img src="static/images/P Cafe1.jpg" alt="" /></a>
+									</article>
+
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot5_10') }}">麻吉奶奶鮮奶麻糬   </a></h3>
+											<p>距離48公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot5_10') }}" class="image"><img src="static/images/麻吉奶奶鮮奶麻糬.jpg" alt="" /></a>
+									</article>
+
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot4_3') }}">紅色穀倉  </a></h3>
+											<p>距離63公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot4_3') }}" class="image"><img src="static/images/紅色穀倉1.jpg" alt="" /></a>
+									</article>
+
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot2_3') }}">日本警官宿舍 </a></h3>
+											<p>距離63公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot2_3') }}" class="image"><img src="static/images/日本警官宿舍01.jpg" alt="" /></a>
+									</article>
+									
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot5_8') }}">源味本鋪古早味現烤蛋糕</a></h3>
+											<p>距離91公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot5_8') }}" class="image"><img src="static/images/源味本舖古早味現烤蛋糕.jpg" alt="" /></a>
+									</article>
+								
+							</div>
+						</section>
+
+						
+						<!-- Footer -->
+							<section id="footer">
+								<ul class="icons">
+									<li><a href="https://www.facebook.com/tamsuiproject" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/tamsuiproject/"  target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<a href="#top" class=" button large " id="BackTop">最上面</a>
+								</ul>
+								
+								<p >專題於2022年製作</p>
+							</section>
+
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/browser.min.js"></script>
+			<script src="static/js/breakpoints.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js"></script>
+			<script>
+				var imgArray = [
+				'https://drive.google.com/uc?export=view&id=1POs48-LwGyKbEFd43pSXX6oV7iimfEtk',
+				'https://drive.google.com/uc?export=view&id=1SGAcCbSW26DqgLjJs04YpIIHBbKYl4dQ',
+				'https://drive.google.com/uc?export=view&id=1sGUgTDXqkOnKkS73B5haw4FbBgAlUvlK',
+
+			],
+				curIndex = 0;
+				imgDuration = 3000;
+			
+			function slideShow() {
+				document.getElementById('slider').className += "fadeOut";
+				setTimeout(function() {
+					document.getElementById('slider').src = imgArray[curIndex];
+					document.getElementById('slider').className = "";
+				},1000);
+				curIndex++;
+				if (curIndex == imgArray.length) { curIndex = 0; }
+				setTimeout(slideShow, imgDuration);
+			}
+			slideShow();
+		</script>
+		 <script>
+            $(function(){
+                $('#BackTop').click(function(){ 
+                    $('html,body').animate({scrollTop:0}, 333);
+                });
+                $(window).scroll(function() {
+                    if ( $(this).scrollTop() > 300 ){
+                        $('#BackTop').fadeIn(222);
+                    } else {
+                        $('#BackTop').stop().fadeOut(222);
+                    }
+                }).scroll();
+            });
+        </script>
+		
+<script>
+	var slideIndex = 1;
+	showDivs(slideIndex);
+	
+	function plusDivs(n) {
+	  showDivs(slideIndex += n);
+	}
+	
+	function currentDiv(n) {
+	  showDivs(slideIndex = n);
+	}
+	
+	function showDivs(n) {
+	  var i;
+	  var x = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("demo");
+	  if (n > x.length) {slideIndex = 1}    
+	  if (n < 1) {slideIndex = x.length} ;
+	  for (i = 0; i < x.length; i++) {
+		 x[i].style.display = "none";  
+	  }
+	  for (i = 0; i < dots.length; i++) {
+		 dots[i].className = dots[i].className.replace(" w3-red", "");
+	  }
+	  x[slideIndex-1].style.display = "block";  
+	  dots[slideIndex-1].className += " w3-red";
+		}
+	</script>
+	</body>
+</html>

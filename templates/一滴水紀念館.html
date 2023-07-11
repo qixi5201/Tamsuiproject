@@ -1,0 +1,281 @@
+{% import "bootstrap/wtf.html" as wtf %}
+<!DOCTYPE HTML>
+
+
+<html>
+	<head>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FFCGET6HE8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FFCGET6HE8');
+</script>
+		<title>淡水旅行手札-一滴水紀念館 </title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/main.css" />
+		<link rel="stylesheet" href="/lib/w3.css">
+		<style>
+			html {
+					scroll-behavior: smooth;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+						<article class="post">
+							<header>
+								<div class="title">
+									<h2>一滴水紀念館 </h2>
+									<h3>日式禪風庭院</h3>
+								</div>
+							
+							</header>
+							
+<span class="image main" style="padding:5px 5px; width: calc(100%);">
+	<div class="w3-content" style="max-width:800px">
+		<img class="mySlides" src="static/images/一滴水紀念館5.jpg" style="width:100%">
+		<img class="mySlides" src="static/images/一滴水紀念館1.jpg" style="width:100%">
+		<img class="mySlides" src="static/images/一滴水紀念館4.jpg" style="width:100%">
+		<img class="mySlides" src="static/images/一滴水紀念館3.jpg" style="width:100%">
+		 
+	</div>	
+	<div class="w3-center" style="margin-top: 20px;">
+		<center>
+		<button class="w3-btn demo" onclick="currentDiv(1)">1</button> 
+		<button class="w3-btn demo" onclick="currentDiv(2)">2</button> 
+		<button class="w3-btn demo" onclick="currentDiv(3)">3</button> 
+		<button class="w3-btn demo" onclick="currentDiv(4)">4</button> 
+		 
+		</center>
+	  </div>
+</span>
+							<span >
+								<p>一滴水紀念館名稱由來是為紀念起造者這一生承襲日本滴水禪師的禪宗思想，崇尚珍惜萬物資源，就算是一滴水也不浪費，除此之外也是為了感念在建設中所有的苦力志工，透過真實的行動傳遞無私奉獻的思想，縱使小如一滴水，最終也能匯聚完成這一工程。一滴水紀念館在淡水捷運站出站後，轉乘紅26公車在滬尾砲台站下車，之後步行約5分鐘即可。一滴水紀念館又稱為水上宅，此紀念館是為了連結日本阪神地震以及台灣921地震的台日情誼而建造的紀念性建築，是在台日本式建築的代表之一。一滴水紀念館的建築風格是典型的住宅風格，整棟建築以木頭做為梁柱，以竹編土牆來完成，整項工程中並未使用讓任何一根釘子，並設有多樣的屋瓦圖騰跟門窗格式。如果喜歡日本文化的人，可以到一滴水紀念館來看看，感受一下當時的建築風格以及周遭幽靜的氛圍。
+
+								</p>
+							</span>
+							<div class="iframe-rwd">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.7412958434365!2d121.42860881484489!3d25.178211783904988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a54ed6070ed1%3A0x634b78e1a9eb1d76!2z5LiA5ru05rC057SA5b-16aSo!5e0!3m2!1szh-TW!2stw!4v1657956851509!5m2!1szh-TW!2stw" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							</div><footer>
+
+								
+								<ul class="actions">
+									<br>
+								</ul>
+							
+								<ul class="stats">
+									<li><a href="#">景點</a></li>
+									
+									
+								</ul>
+							</footer>
+						</article>
+						<article class="post">
+							<header>
+								<div class="title">
+									<h2>留言區</h2>
+									<h3>說說你的想法</h3>
+								</div>
+							
+							</header>
+							<form method="post" >
+								{{ wtf.quick_form(form) }}
+							</form>
+							
+							
+						</article>
+
+						<article class="post">
+							<header>
+								<div class="title">
+									<center>
+										<h2>留言版</h2>
+									</center>
+								</div>
+							
+							</header>
+						{% for item in messages%}
+						<p>
+							{{  item.name }}<br>
+							{{  item.body }}<br>
+							{{  item.timestamp }}<br></p>
+							<hr>
+						{% endfor %}
+						{% with messages = get_flashed_messages() %}
+						{% if messages %}
+						<ul class="flash">
+							{% for message in messages %}
+								<li>{{ message }}</li>
+								
+							{% endfor %}
+						</ul>
+						{% endif %}
+						{% endwith %}
+						</article>
+					</div>
+
+				<!-- Sidebar -->
+					<section id="sidebar">
+
+						<!-- Intro -->
+							<section id="intro">
+								
+								<header>
+									<h2><a href="{{ url_for('index') }}" >淡水旅行手札</a></h2>
+								
+								</header>
+							</section>
+
+						<!-- Mini Posts -->
+						<section>
+							<div class="mini-posts">
+								<h2>附近景點</h2>
+								<!-- Mini Post -->
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot1_6') }}">淡水和平公園 </a></h3>
+											<p>距離112公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot1_6') }}" class="image"><img src="static/images/淡水和平公園 .jpg" alt="" /></a>
+									</article>
+
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot2_6') }}">滬尾砲台 </a></h3>
+											<p>距離185公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot2_6') }}" class="image"><img src="static/images/滬尾砲台公園4.jpg" alt="" /></a>
+									</article>
+
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot3_14') }}">媽媽嘴咖啡(淡水樂活店)</a></h3>
+											<p>距離187公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot3_14') }}" class="image"><img src="static/images/媽媽嘴咖啡(淡水樂活店) 2.jpg" alt="" /></a>
+									</article>
+
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot1_7') }}">雲門舞集-雲門劇場 </a></h3>
+											<p>距離305公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot1_7') }}" class="image"><img src="static/images/雲門舞集-雲門劇場1.jpg" alt="" /></a>
+									</article>
+									
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot1_5') }}">滬尾藝文休閒園區 </a></h3>
+											<p>距離359公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot1_5') }}" class="image"><img src="static/images/滬尾藝文休閒園區.jpg" alt="" /></a>
+									</article>
+								
+							</div>
+						</section>
+
+						
+						<!-- Footer -->
+							<section id="footer">
+								<ul class="icons">
+									<li><a href="https://www.facebook.com/tamsuiproject" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/tamsuiproject/"  target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<a href="#top" class=" button large " id="BackTop">最上面</a>
+								</ul>
+								
+								<p >專題於2022年製作</p>
+							</section>
+
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/browser.min.js"></script>
+			<script src="static/js/breakpoints.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js"></script>
+			<script>
+				var imgArray = [
+				'https://drive.google.com/uc?export=view&id=1vTBiPFgD6qp_-jhGaYzub63vOyfRlutm',
+				'https://drive.google.com/uc?export=view&id=1bsed8I2TUY6Jm-pdiD6hkfI7zNtKt4Ta',
+				'https://drive.google.com/uc?export=view&id=1YKsqjoEMkewUuVjq3deHMIVqFuNFcXWY',
+
+			],
+				curIndex = 0;
+				imgDuration = 3000;
+			
+			function slideShow() {
+				document.getElementById('slider').className += "fadeOut";
+				setTimeout(function() {
+					document.getElementById('slider').src = imgArray[curIndex];
+					document.getElementById('slider').className = "";
+				},1000);
+				curIndex++;
+				if (curIndex == imgArray.length) { curIndex = 0; }
+				setTimeout(slideShow, imgDuration);
+			}
+			slideShow();
+		</script>
+		 <script>
+            $(function(){
+                $('#BackTop').click(function(){ 
+                    $('html,body').animate({scrollTop:0}, 333);
+                });
+                $(window).scroll(function() {
+                    if ( $(this).scrollTop() > 300 ){
+                        $('#BackTop').fadeIn(222);
+                    } else {
+                        $('#BackTop').stop().fadeOut(222);
+                    }
+                }).scroll();
+            });
+        </script>
+
+<script>
+	var slideIndex = 1;
+	showDivs(slideIndex);
+	
+	function plusDivs(n) {
+	  showDivs(slideIndex += n);
+	}
+	
+	function currentDiv(n) {
+	  showDivs(slideIndex = n);
+	}
+	
+	function showDivs(n) {
+	  var i;
+	  var x = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("demo");
+	  if (n > x.length) {slideIndex = 1}    
+	  if (n < 1) {slideIndex = x.length} ;
+	  for (i = 0; i < x.length; i++) {
+		 x[i].style.display = "none";  
+	  }
+	  for (i = 0; i < dots.length; i++) {
+		 dots[i].className = dots[i].className.replace(" w3-red", "");
+	  }
+	  x[slideIndex-1].style.display = "block";  
+	  dots[slideIndex-1].className += " w3-red";
+		}
+	</script>
+	</body>
+</html>

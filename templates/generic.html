@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FFCGET6HE8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FFCGET6HE8');
+</script>
+		<title>淡水旅行手札</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/main-1.css" />
+		<noscript><link rel="stylesheet" href="static/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="{{ url_for('index') }}" class="logo">
+									<span class="title">淡水旅行手札</span>
+								</a>
+
+							<!-- Nav -->
+								
+								
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+				
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>長堤 LB Cafe</h1>
+							<span class="image main"><img src="https://drive.google.com/uc?export=view&id=1lkFvR48yrrPEjl5dlIn7fpJ8XVjb5qhO" alt="" ></span>
+							<p>淡水長堤 LB Cafe提供豐富的餐點有漢堡、三明治、義大利麵、燉飯，旅人來訪可以用餐，也可以下午茶走上閣樓，還有淡水河絕佳的觀景平台，如此唯美的觀海基地，的確令人忘卻喧囂呀</p>
+							<p>淡水長堤咖啡餐館 LB Cafe 距離淡水捷運站需步行 15 分鐘，緊臨淡水河，視野正對對岸的八里，不論是愛山、愛海還是愛夕陽，在淡水長堤咖啡館都能望見讓心為之怦然的景色。淡水長堤除了提供義大利麵、燉飯、漢堡等主食之外，也有提供三明治、鬆餅等輕食，飲料的部分有咖啡、茶飲、冰沙，可說是應有盡有。</p>
+						</div>
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<section>
+							<h2>留言處</h2>
+							<form method="POST" action="{{url_for('submit')}}">
+								<div class="fields">
+									<div class="field half">
+										<input type="text" name="name" id="name" placeholder="姓名" />
+									</div>
+									<div class="field half">
+										<input type="email" name="email" id="email" placeholder="信箱" />
+									</div>
+									<div class="field">
+										<textarea name="message" id="message" placeholder="想法/留言"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="發送" class="primary" /></li>
+								</ul>
+							</form>
+						</section>
+						<section>
+							<h2>聯絡我們</h2>
+							<ul class="icons">
+								<li><a href="https://www.instagram.com/informationforensic/" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.instagram.com/informationforensic/" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="https://www.instagram.com/informationforensic/" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+							
+							</ul>
+						</section>
+						
+						<p>專題於2022年製作</p>
+					</div>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/browser.min.js"></script>
+			<script src="static/js/breakpoints.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js"></script>
+
+	</body>
+</html>

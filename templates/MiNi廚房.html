@@ -1,0 +1,278 @@
+{% import "bootstrap/wtf.html" as wtf %}
+<!DOCTYPE HTML>
+
+
+<html>
+	<head>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FFCGET6HE8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FFCGET6HE8');
+</script>
+		<title>淡水旅行手札-MiNi廚房</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/main.css" />
+		<link rel="stylesheet" href="/lib/w3.css">
+
+		<style>
+			html {
+					scroll-behavior: smooth;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+						<article class="post">
+							<header>
+								<div class="title">
+									<h2>MiNi廚房</h2>
+									<h3>平價又美味的義大利麵</h3>
+								</div>
+							
+							</header>
+
+							<span class="image main" style="padding:5px 5px; width: calc(100%);">
+								<div class="w3-content" style="max-width:800px">
+									<img class="mySlides" src="static/images/Mini廚房01.jpg" style="width:100%">
+							 
+								</div>
+								  <div class="w3-center" style="margin-top: 20px;">
+									<center>
+									<button class="w3-btn demo" onclick="currentDiv(1)">1</button> 
+							 
+									</center>
+								  </div>
+							</span>
+							<span >
+								<p>MiNi廚房 是一間位在淡江大學附近的餐廳，主打平價的義大利麵和焗烤飯，從淡水捷運站出站後並行15分鐘就會抵達，MiNi廚房 菜單上餐點平均價格都不超過200元，店內桌數並不多，大概有5桌左右，到了晚餐時刻客人就會陸續湧進，如過要內用的話建議要提早一些，盡量避開最多人的時候去。MiNi廚房 的義大利麵以及燉飯都可以做成焗烤，對於喜歡吃起司的人一定要嘗試看看。這間餐廳因為處在淡江大學和淡水老街附近，而且價錢也不貴，如果是想吃平價美食的人，推薦MiNi廚房 給你們。
+
+								</p>
+							</span>
+							<div class="iframe-rwd">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.898987989717!2d121.44463431484482!3d25.172888383907463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442af3a67d162a9%3A0x25aaf3480a858f6d!2zTWlOaeW7muaIvyDnvqnlpKfliKnpurUv5reh5rC0576O6aOfL3Jlc3RhdXJhbnQv5reh5rC0576p5aSn5Yip6bq1L-a3oeawtOaOqOiWpumkkOW7sy_mt6HmsLTpmYTov5Hnvo7po58v5reh5rC05b-F5ZCD!5e0!3m2!1szh-TW!2stw!4v1658133725210!5m2!1szh-TW!2stw" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							</div><footer>
+
+								
+								<ul class="actions">
+									<br>
+								</ul>
+							
+								<ul class="stats">
+									<li><a href="#">景點</a></li>
+									
+									
+								</ul>
+							</footer>
+						</article>
+						<article class="post">
+							<header>
+								<div class="title">
+									<h2>留言區</h2>
+									<h3>說說你的想法</h3>
+								</div>
+							
+							</header>
+							<form method="post" >
+								{{ wtf.quick_form(form) }}
+							</form>
+							
+							
+						</article>
+
+						<article class="post">
+							<header>
+								<div class="title">
+									<center>
+										<h2>留言版</h2>
+									</center>
+								</div>
+							
+							</header>
+						{% for item in messages%}
+						<p>
+							{{  item.name }}<br>
+							{{  item.body }}<br>
+							{{  item.timestamp }}<br></p>
+							<hr>
+						{% endfor %}
+						{% with messages = get_flashed_messages() %}
+						{% if messages %}
+						<ul class="flash">
+							{% for message in messages %}
+								<li>{{ message }}</li>
+								
+							{% endfor %}
+						</ul>
+						{% endif %}
+						{% endwith %}
+						</article>
+					</div>
+
+				<!-- Sidebar -->
+					<section id="sidebar">
+
+						<!-- Intro -->
+							<section id="intro">
+								
+								<header>
+									<h2><a href="{{ url_for('index') }}" >淡水旅行手札</a></h2>
+								
+								</header>
+							</section>
+
+						<!-- Mini Posts -->
+						<section>
+							<div class="mini-posts">
+								<h2>附近景點</h2>
+								<!-- Mini Post -->
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot4_16') }}">星月 Hoshizuki</a></h3>
+											<p>距離4公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot4_16') }}" class="image"><img src="static/images/blank.png" alt="" /></a>
+									</article>
+
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot4_24') }}">越南小棧</a></h3>
+											<p>距離115公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot4_24') }}" class="image"><img src="static/images/越南小棧.jpg" alt="" /></a>
+									</article>
+
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot4_26') }}">米特食堂MeetEuropa</a></h3>
+											<p>距離168公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot4_26') }}" class="image"><img src="static/images/米特食堂01.jpg" alt="" /></a>
+									</article>
+
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot5_6') }}">大吉祥香豆富</a></h3>
+											<p>距離168公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot5_6') }}" class="image"><img src="static/images/大吉祥豆富02.jpg" alt="" /></a>
+									</article>
+									
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot3_18') }}">Handshop 撼動屋(英專店)</a></h3>
+											<p>距離230公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot3_18') }}" class="image"><img src="static/images/Handshop 撼動屋(英專店)3.jpg" alt="" /></a>
+									</article>
+								
+							</div>
+						</section>
+
+						
+						<!-- Footer -->
+							<section id="footer">
+								<ul class="icons">
+									<li><a href="https://www.facebook.com/tamsuiproject" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/tamsuiproject/"  target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<a href="#top" class=" button large " id="BackTop">最上面</a>
+								</ul>
+								
+								<p >專題於2022年製作</p>
+							</section>
+
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/browser.min.js"></script>
+			<script src="static/js/breakpoints.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js"></script>
+			<script>
+				var imgArray = [
+				'https://drive.google.com/uc?export=view&id=1Dl6TZ28xGfTFd8w-OIpyDLxq5JkM2DuL',
+				'https://drive.google.com/uc?export=view&id=1dJEQqMTqMlkfm_w0AsMp8kLxbXGqSnDQ',
+				'https://drive.google.com/uc?export=view&id=16RFiZ81mXBh_J34J0qo5yjOD-QAzhC8-',
+				'https://drive.google.com/uc?export=view&id=1BXINXXqRWvbHAfJnBPMskk4arvN5bc-9',
+
+			],
+				curIndex = 0;
+				imgDuration = 3000;
+			
+			function slideShow() {
+				document.getElementById('slider').className += "fadeOut";
+				setTimeout(function() {
+					document.getElementById('slider').src = imgArray[curIndex];
+					document.getElementById('slider').className = "";
+				},1000);
+				curIndex++;
+				if (curIndex == imgArray.length) { curIndex = 0; }
+				setTimeout(slideShow, imgDuration);
+			}
+			slideShow();
+		</script>
+		 <script>
+            $(function(){
+                $('#BackTop').click(function(){ 
+                    $('html,body').animate({scrollTop:0}, 333);
+                });
+                $(window).scroll(function() {
+                    if ( $(this).scrollTop() > 300 ){
+                        $('#BackTop').fadeIn(222);
+                    } else {
+                        $('#BackTop').stop().fadeOut(222);
+                    }
+                }).scroll();
+            });
+        </script>
+		
+
+<script>
+	var slideIndex = 1;
+	showDivs(slideIndex);
+	
+	function plusDivs(n) {
+	  showDivs(slideIndex += n);
+	}
+	
+	function currentDiv(n) {
+	  showDivs(slideIndex = n);
+	}
+	
+	function showDivs(n) {
+	  var i;
+	  var x = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("demo");
+	  if (n > x.length) {slideIndex = 1}    
+	  if (n < 1) {slideIndex = x.length} ;
+	  for (i = 0; i < x.length; i++) {
+		 x[i].style.display = "none";  
+	  }
+	  for (i = 0; i < dots.length; i++) {
+		 dots[i].className = dots[i].className.replace(" w3-red", "");
+	  }
+	  x[slideIndex-1].style.display = "block";  
+	  dots[slideIndex-1].className += " w3-red";
+		}
+	</script>
+	</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+
+
+<html>
+	<head>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FFCGET6HE8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FFCGET6HE8');
+</script>
+		<title>搜尋文章</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/main.css" />
+		<style>
+			html {
+					scroll-behavior: smooth;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="{{url_for('index')}}">淡水旅行手札</a></h1>
+					</header>
+
+
+				<!-- Main -->
+					<div id="main">
+						
+						{% for item in values%}
+							<article class="post">
+								
+								<header>	
+									<div class="title">
+										<h2>{{item.head}}</h2>
+										<p>{{item.main}}</p>
+									</div>
+									<div class="meta">
+										<time class="published" style="font-size:15px">{{item.timestamp}}</time>
+									</header>
+									<p>{{item.body}}</p>
+							</article>
+							{% endfor %}
+							<ul class="actions">
+								<li><a href="{{url_for('spot')}}" class="button large">上一頁</a></li>
+								<li><a href="#top" class=" button large "id="BackTop">最上面</a></li>
+							</ul>						
+					</div>
+
+				<!-- Sidebar -->
+					<section id="sidebar">
+
+						<!-- Intro -->
+							<section id="intro">
+								
+								<header>
+									<h2>搜尋文章</h2>
+									<p>這裡是您搜尋的總覽</p>
+								</header>
+							</section>
+
+							<!-- Footer -->
+							<section id="footer">
+								<ul class="icons">
+									<li><a href="https://www.facebook.com/tamsuiproject" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/tamsuiproject/"  target="_blank"class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									
+									
+								</ul>
+								
+								<p >專題於2022年製作</p>
+							</section>
+
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/browser.min.js"></script>
+			<script src="static/js/breakpoints.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js"></script>
+			
+	</body>
+	<script>
+		$(function(){
+			$('#BackTop').click(function(){ 
+				$('html,body').animate({scrollTop:0}, 333);
+			});
+			$(window).scroll(function() {
+				if ( $(this).scrollTop() > 300 ){
+					$('#BackTop').fadeIn(222);
+				} else {
+					$('#BackTop').stop().fadeOut(222);
+				}
+			}).scroll();
+		});
+	</script>
+</html>

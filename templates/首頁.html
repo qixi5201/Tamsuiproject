@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FFCGET6HE8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FFCGET6HE8');
+</script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+    <link href="static/css/bootstrap-icons.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="../static/style/main.css" />
+
+    <script src="../static/dist/vendor.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>淡水旅行手札</title>
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="static/css/font-awesome.css">
+
+    <link rel="stylesheet" href="static/css/templatemo-softy-pinko.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js">utf-8</script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">                  
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="static/css/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="static/css/tooplate-crispy-kitchen.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    
+    <body>
+    <!-- ***** Preloader Start ***** -->
+ 
+    <!-- ***** Preloader End ***** -->
+    <button type="button" id="BackTop" class="toTop-arrow"></button>
+    
+    <!-- ***** Header Area Start ***** -->
+     
+    <!-- ***** Header Area End ***** -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-lg">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+                淡水旅行手札
+            </a>
+
+           
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features1">開始探索</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#work-process">其他連結</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link " href="#testimonials">留言版</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#blog">推薦景點</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#contact-us">留言給我</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="{{ url_for('user') }}">會員登入/個人空間</a>
+                    </li>
+                    
+                   
+                </ul>
+            </div>
+
+            
+
+        </div>
+    </nav>
+
+
+    <!-- ***** Welcome Area Start ***** -->
+    <div class="welcome-area" id="welcome">
+
+        
+        <div id="carouselSlides" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="static/images/b1.jpg" alt="" >
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="static/images/b2.jpg" alt="" >
+              </div>
+              
+            </div>
+            <!--Carousel indicators 開始-->
+            <ol class="carousel-indicators">
+              <li data-target="#carouselSlides" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselSlides" data-slide-to="1"></li>
+            </ol>
+            <!--Carousel control 開始-->
+            <a class="carousel-control-prev" href="#carouselSlides" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#carouselSlides" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+          </div>
+           
+
+
+        <!-- ***** Header Text Start ***** -->
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+                        <h1><strong>淡水景點-淡水旅行手札</strong></h1>
+                        <p style="font-size: 20px;">帶您逛遍淡水各個角落</p>
+                     
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ***** Header Text End ***** -->
+    </div>
+    <!-- ***** Welcome Area End ***** -->
+
+    <!-- ***** Features Small Start ***** -->
+    <section class="section home-feature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <!-- ***** Features Small Item Start ***** -->
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
+                           <a href="http://www.general.tku.edu.tw/Front/map/Archive.aspx?id=zVsBtC5G%2Bw0=" target="_blank">
+                            <div class="features-small-item" >
+                                <div class="icon">
+                                    <i><img src="static/images/star_1.png" alt="" ></i>
+                                </div>
+                                <h5 class="features-title">淡江大學 校園地圖</h5>
+                                <p>各項位置圖</p>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- ***** Features Small Item End ***** -->
+
+                        <!-- ***** Features Small Item Start ***** -->
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
+                            <a href="{{ url_for('spot') }}">
+                            <div class="features-small-item">
+                                <div class="icon">
+                                    <i><img src="static/images/star_1.png" alt=""></i>
+                                </div>
+                                <h5 class="features-title">景點一覽</h5>
+                                <p>淡水值得推薦景點分類</p>
+                            </div>
+                        </a>
+                        </div>
+                        <!-- ***** Features Small Item End ***** -->
+
+                        <!-- ***** Features Small Item Start ***** -->
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
+                            <a href="#blog">
+                            <div class="features-small-item">
+                                <div class="icon">
+                                    <i><img src="static/images/star_1.png" alt=""></i>
+                                </div>
+                                <h5 class="features-title">私心推薦</h5>
+                                <p>我們覺得最讚的景點</p>
+                            </div>
+                        </a>
+                        </div>
+                        <!-- ***** Features Small Item End ***** -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Small End ***** -->
+
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section padding-top-70 padding-bottom-0" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-12 col-sm-12 align-self-center" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                    <img src="static/images/project.jpg" class="rounded img-fluid d-block mx-auto" alt="App">
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-top-fix">
+                    <div class="left-heading">
+                        <h2 class="section-title"><strong>簡介</strong></h2>
+                    </div>
+                    <div class="left-text">
+                        
+                        <p>在學校，初來乍到，可能對學校周圍很多事物很不熟悉。儘管網路上有很多介紹美食景點的文章不勝枚舉，但是資料都是零散的，我們還是必須一一搜尋。因此我們打算將其整合，讓學生能夠滿足吃喝玩樂和快速找到學校提供常用服務的網站。</p>
+                        <p>另外我們也有在其他平台上經營，也可以點進去追蹤一下唷</p>
+                        <ul class="social-icon">
+                            <li><a href="https://www.facebook.com/tamsuiproject" target="_blank" class="social-icon-link bi-facebook"></a></li>
+
+                            <li><a href="https://www.instagram.com/tamsuiproject/"  target="_blank" class="social-icon-link bi-instagram"></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="hr"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Big Item End ***** -->
+
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section padding-bottom-100" id="features1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-bottom-fix" data-scroll-reveal  >
+                    
+                    <div class="left-heading" >
+                        <h2 class="section-title"><strong>開始探索</strong></h2>
+                    </div>
+                    
+                    <div class="left-text">
+                        <a href="{{ url_for('spot') }}">
+                            <p style="color: #777;">淡水是新北市的熱門旅遊景點，這裡最有名的淡水老街集中許多特色美食，而且來淡水玩還可以找到非常多好玩景點，像充滿歷史感的淡水紅毛城、小白宮、滬尾偕醫館、海關碼頭等古蹟景點；總是滿滿人潮的黃金水岸；適合情侶散步的榕堤水岸；還有欣賞絕美夕陽的淡水漁人碼頭、滬尾藝文休閒園區⋯等</p>
+                         <a href="{{ url_for('spot') }}" class="main-button-slider" style="font-size: 1.2em;">點擊開始探索淡水</a> 
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-5 col-md-12 col-sm-12 align-self-center mobile-bottom-fix-big" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                    <a href="{{ url_for('spot') }}"><img src="static/images/river.jpg" class="rounded img-fluid d-block mx-auto" alt="App"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Big Item End ***** -->
+
+    <!-- ***** Home Parallax Start ***** -->
+    <section class="mini" id="work-process">
+        <div class="mini-content">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-lg-3 col-lg-6">
+                        <div class="info">
+                            <h1>其他連結</h1>
+                            <p>相關連結</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ***** Mini Box Start ***** -->
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                        <a href="https://www.tku.edu.tw/" target="_blank" class="mini-box">
+                            <i><img src="static/images/star_2.png" alt="" style="height: 32px;width: 32px;" ></i>
+                            <strong>淡江大學</strong>
+                            <span>淡江大學官方網站</span>
+                            
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                        <a href="http://www.im.tku.edu.tw/tw/"target="_blank" class="mini-box">
+                            <i><img src="static/images/star_2.png" alt="" style="height: 32px;width: 32px;"></i>
+                            <strong>資管系</strong>
+                            <span>資管系詳細資料</span>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                        <a href="https://www.instagram.com/tkusagram/"target="_blank" class="mini-box">
+                            <i><img src="static/images/star_2.png" alt="" style="height: 32px;width: 32px;"></i>
+                            <strong>學生會IG</strong>
+                            <span>淡江大學 學生會IG官網</span>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                        <a href="https://www.instagram.com/tkuim/"target="_blank" class="mini-box">
+                            <i><img src="static/images/star_2.png" alt="" style="height: 32px;width: 32px;"></i>
+                            <strong>資管系IG</strong>
+                            <span>淡江大學 資管系IG官網</span>
+
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                        <a href="https://usr.tku.edu.tw/"target="_blank" class="mini-box">
+                            <i><img src="static/images/star_2.png" alt="" style="height: 32px;width: 32px;"></i>
+                            <strong>USR 服務</strong>
+                            <span>大學社會責任實踐計畫</span>
+
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                        <a href="https://about.tku.edu.tw/"target="_blank" class="mini-box">
+                            <i><img src="static/images/star_2.png" alt=""></i>
+                            <strong>認識淡江</strong>
+                            <span>淡江故事</span>
+
+                        </a>
+                    </div>
+                </div>
+                <!-- ***** Mini Box End ***** -->
+            </div>
+        </div>
+    </section>
+    <!-- ***** Home Parallax End ***** -->
+
+    <!-- ***** Testimonials Start ***** -->
+    <section class="section" id="testimonials">
+        <div class="container">
+            <!-- ***** Section Title Start ***** -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="center-heading">
+                        <h2 class="section-title">文章版</h2>
+                    </div>
+                </div>
+                <div class="offset-lg-3 col-lg-6">
+                    <div class="center-text">
+                        <p>最新的文章都在這</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ***** Section Title End ***** -->
+            
+            <div class="row">
+                {% for item in values%}
+                <!-- ***** Testimonials Item Start ***** -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="team-item">
+                        <div class="team-content">
+                            <i><img src="static/images/talk.png" alt=""style="height: 48px;width: 48px;"></i>
+                            <p><b>{{item.head}}</b></p>
+                            <p>{{item.body}}</p>
+                            
+                            <div class="user-image">
+                                <img src="http://placehold.it/60x60" alt="">
+                            </div>
+                            <div class="team-info">
+                                <h3 class="user-name" style="font-family: monospace, STKaiti;">作者：<a href="{{ url_for('viewuser',userid=item.author)}}">{{item.author}}</a></h3>
+                                <p>{{item.tag}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                <!-- ***** Testimonials Item End ***** -->
+                
+               
+            </div>
+            <center>
+             
+                    <a href="{{ url_for('userspot1') }}" class="custom-btn btn btn-secondary mt-2"style="font-size: 1.2em; ">點擊查看所有景點類文章</a>
+                    <a href="{{ url_for('userspot2') }}" class="custom-btn btn btn-secondary mt-2"style="font-size: 1.2em; ">點擊查看所有美食類文章</a>
+    
+        </center>
+        </div>
+    </section>
+    <!-- ***** Testimonials End ***** -->
+
+
+     <section class="section" id="blog1" style="background-color:  #d1c8ec;">
+        <div class="container">
+            <!-- ***** Section Title Start ***** -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="center-heading" >
+                        <h2 class="section-title">資料圖形區</h2>
+                    </div>
+                </div>
+                <div class="offset-lg-3 col-lg-6">
+                    <div class="center-text">
+                        <p>圖表</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ***** Section Title End ***** -->
+
+            <div class="row">
+                
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="blog-post-thumb">
+                        <canvas id="doughnutChart" width="800" height="300"></canvas>
+                        <script>
+                            const data={
+                                labels: ['休閒景點', '古蹟景點', '咖啡廳', '正餐', '小吃' ],
+                                      datasets: [{
+                                      label: 'My First Dataset',
+                                      data: [17, 17, 18, 29, 10],
+                                      backgroundColor: [
+                                          '#0AA1DD',
+                                          '#646FD4',
+                                          '#6E85B7',
+                                          '#81CACF',
+                                          '#395B64'],
+
+                                      hoverOffset: 0,
+                                      borderwidth:2,
+                                      cutout:'70%'
+                                      }]
+                            };
+
+                            //hoverLabel
+                            const hoverLabel = {
+                                id : 'hoverLabel',
+                                afterDraw(chart, args, options){
+                                    const {ctx, chartArea:{left, right, top, buttom, width, height}} = chart;
+                                    ctx.save();
+
+                                    if(chart._active.length > 0){
+                                        const textLabel =chart.config.data.labels[chart._active[0].index];
+                                        
+                                        console.log(chart._active[0].index)
+                                        console.log(chart.config.data.labels[chart._active[0].index])
+
+                                        ctx.font = 'bolder 40px Arial';
+                                        ctx.fillStyle = '#002B5B';
+                                        ctx.textAlign = 'center';
+                                        ctx.fillText(textLabel, width/2, height/2+top)
+                                    } 
+                                }
+                            }
+
+                            const config = {
+                                type: "doughnut",
+                                data: data,
+                                options:{
+                                    plugins:{
+                                        legend:{
+                                        labels:{
+                                            font:{size:16}
+                                        }
+                                    }
+                                    }
+                                },
+                                plugins:[hoverLabel]
+                            };
+
+                            const myChart = new Chart(
+                                document.getElementById( "doughnutChart" ),
+                                config
+                            );
+                            
+                        </script>
+                        <div class="blog-content">
+                            
+                            <a href="{{ url_for('spot') }}" class="main-button">前往景點</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12"style="width: 200px;height: 10px;"></div>
+
+               
+                <div class="col-lg-4 col-md-6 col-sm-12" style="width:675px;height: 100%;">
+                    
+                    <div id="bubble">
+                          <right>  
+                      
+                            
+                        <div class="blog-post-thumb">
+                            <center> <p><b>文章被喜歡次數</b></p></center>
+                             <script>
+                                !function(e){
+ function t(t){
+        for(var r,u,o=t[0],i=t[1],c=t[2],f=0,d=[];f<o.length;f++)
+        u=o[f],
+        Object.prototype.hasOwnProperty.call(a,u)&&a[u]&&d.push(a[u][0]),
+        a[u]=0;
+        for(r in i)
+        Object.prototype.hasOwnProperty.call(i,r)&&(e[r]=i[r]);
+        for(s&&s(t);d.length;)
+        d.shift()();
+        return l.push.apply(l,c||[]),n()
+    }
+    function n(){
+        for(var e,t=0;t<l.length;t++){
+            for(var n=l[t],r=!0,o=1;o<n.length;o++){
+                var i=n[o];
+                0!==a[i]&&(r=!1)}r&&(l.splice(t--,1),
+                e=u(u.s=n[0]))
+            }
+            return e
+        }
+        var r={},
+        a={2:0},
+        l=[];
+        function u(t){
+            if(r[t])
+            return r[t].exports;
+            var n=r[t]={i:t,l:!1,exports:{}};
+            return e[t].call(n.exports,n,n.exports,u),
+            n.l=!0,
+            n.exports}
+            u.m=e,
+            u.c=r,
+            u.d=function(e,t,n){
+                u.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:n})},
+                u.r=function(e){
+                    "undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,
+                        {value:"Module"}
+                        ),
+                        Object.defineProperty(e,"__esModule",{value:!0})},
+                        u.t=function(e,t){
+                            if(1&t&&(e=u(e)),8&t)
+                            return e;
+                            if(4&t&&"object"==typeof e&&e&&e.__esModule)
+                            return e;
+                            var n=Object.create(null);
+                            if(u.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:e}),
+                            2&t&&"string"!=typeof e)
+                            for(var r in e)
+                            u.d(n,r,function(t)
+                            {return e[t]}.bind(null,r));return n},
+                            u.n=function(e){
+                                var t=e&&e.__esModule?function(){
+                                    return e.default}:function(){return e};
+                                    return u.d(t,"a",t),t},
+                                    u.o=function(e,t){
+                                        return Object.prototype.hasOwnProperty.call(e,t)},
+                                        u.p="/dist/";
+                                        var o=window.webpackJsonp=window.webpackJsonp||[],
+                                        i=o.push.bind(o);
+                                        o.push=t,
+                                        o=o.slice();
+                                        for(var c=0;c<o.length;c++)t(o[c]);
+                                        var s=i;l.push([8,0]),n()}({2:function(e,t,n){"use strict";n.d(t,"a",(function(){return r})),n.d(t,"d",(function(){return a})),n.d(t,"c",(function(){return l})),n.d(t,"e",(function(){return u})),n.d(t,"b",(function(){return o}));var r=[{name:"Google",value:30},{name:"Facebook",value:20}],a=[{name:"Google",series:[{name:"女性",value:50},{name:"男性",value:150}]},{name:"Facebook",series:[{name:"女性",value:126},{name:"男性",value:347}]}],l=[{name:"Google",series:[{name:"08-26",value:30},{name:"08-27",value:50},{name:"08-28",value:10},{name:"08-29",value:100},{name:"08-30",value:20},{name:"08-31",value:150},{name:"09-01",value:120}]},{name:"Facebook",series:[{name:"08-26",value:30},{name:"08-27",value:80},{name:"08-28",value:20},{name:"08-29",value:200},{name:"08-30",value:300},{name:"08-31",value:150},{name:"09-01",value:230}]}],u=[{name:"Google",series:[{name:"desktop",value:307},{name:"mobile",value:89},{name:"tablet",value:146},{name:"tv",value:252}]}],
+                                        
+                                        
+                                        o=[{title:"{{a1[0]}}",likes:"{{a2[0]}}"},
+                                        {title:"{{a1[1]}}",likes:"{{a2[1]}}"},
+                                        {title:"{{a1[2]}}",likes:"{{a2[2]}}"},
+                                        {title:"{{a1[3]}}",likes:"{{a2[3]}}"},
+                                        {title:"{{a1[4]}}",likes:"{{a2[4]}}"},
+                                        {title:"{{a1[5]}}",likes:"{{a2[5]}}"},
+                                        {title:"{{a1[6]}}",likes:"{{a2[6]}}"},
+                                        {title:"{{a1[7]}}",likes:"{{a2[7]}}"},
+                                        {title:"{{a1[8]}}",likes:"{{a2[8]}}"},
+                                        {title:"{{a1[9]}}",likes:"{{a2[9]}}"},
+                                        ]},
+                                        
+                                        8:function(e,t,n){"use strict";n.r(t);var r=n(1),a=n(2);var l={bubble_chart:
+                                            function(e){var t={children:a.b},n=document.querySelector("#".concat(e)).clientWidth,l=n,u=r.h().padding(1.5).size([n,l])(r.e(t).sum((function(e){return e.likes})).sort((function(e,t){return t.data.likes-e.data.likes})));u=u.children;var o=r.m(document.querySelector("#".concat(e))).append("div").attr("class","bubble").style("display","block").append("svg").attr("width",n).attr("height",l).selectAll(".node").data(u).enter().append("g").attr("class","node");
+                                            o.append("circle")
+                                            .on('click', d => {
+                                                location.href="allspot";
+                                            })
+                                            .attr("cx",(function(e){return e.x})).attr("cy",(function(e){return e.y})).attr("r",(function(e){return e.r})).attr("fill","#336699"),o.append("text").attr("x",(function(e){return e.x})).attr("y",(function(e){return e.y})).attr("dy",".5em").attr("text-anchor","middle").attr("fill","#ffffff").text((function(e){return e.data.title}))}};window.onload=function(){l.bubble_chart("bubble")}}});
+                            </script>
+                       </div>   
+                    </right>
+                    </div>  
+                    
+                </div>
+              
+                
+            </div>
+        </div>
+    </section>
+    <section class="section" id="blog">
+        <div class="container">
+            <!-- ***** Section Title Start ***** -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="center-heading" >
+                        <h2 class="section-title">推薦景點</h2>
+                    </div>
+                </div>
+                <div class="offset-lg-3 col-lg-6">
+                    <div class="center-text">
+                        <p>我們覺得最讚的景點!!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ***** Section Title End ***** -->
+
+            <div class="row">
+                {% for item in values1%}
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="blog-post-thumb">
+                        <div class="img">
+                            <img src="{{item.pic}}" alt="暫時沒有照片"width="370px" height="220px">
+                        </div>
+                        <div class="blog-content">
+                            <h3 style="font-size: 20pt;">
+                                {{item.head}}
+                            </h3>
+                            <div class="text" style="font-size: 13pt;">
+                                {{item.main}}
+                            </div>
+                            <a href="{{item.url}}" class="main-button">了解詳情</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- ***** Contact Us Start ***** -->
+    <section class="section colored" id="contact-us" style="background-color:  #d1c8ec;">
+        <div class="container">
+            <!-- ***** Section Title Start ***** -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="center-heading">
+                        <h2 class="section-title">留言給我</h2>
+                    </div>
+                </div>
+                <div class="offset-lg-3 col-lg-6">
+                    <div class="center-text">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <!-- ***** Section Title End ***** -->
+
+            <div class="row">
+                <!-- ***** Contact Text Start ***** -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="contact-text" style="font-size: 20px;">
+                        <p>把你想說的都寫進去吧
+                        <br></p>
+                    </div>
+                </div>
+                <!-- ***** Contact Text End ***** -->
+
+                <!-- ***** Contact Form Start ***** -->
+                <div class="col-lg-8 col-md-6 col-sm-12">
+                    <div class="contact-form">
+                        <form id="contact" action="{{url_for('submit')}}" method="POST">
+                          <div class="row">
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                                {{ form.hidden_tag() }}
+                              <fieldset>
+                                {{ form.name.label }}{{ form.name }}
+                              </fieldset>
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                              <fieldset>
+                                {{ form.email.label }}{{ form.email}}
+                              </fieldset>
+                            </div>
+                            <div class="col-lg-12">
+                              <fieldset>
+                                {{ form.body.label }}{{ form.body }}
+                              </fieldset>
+                            </div>
+                            <div class="col-lg-12">
+                              <fieldset>
+                                {{ form.submit}}
+                              </fieldset>
+                            </div>
+                          </div>
+                        </form>
+                    </div>
+                    {% with messages = get_flashed_messages() %}
+						{% if messages %}
+						<ul class="flash">
+							{% for message in messages %}
+								<li>{{ message }}</li>
+								
+							{% endfor %}
+						</ul>
+						{% endif %}
+						{% endwith %}
+                </div>
+                <!-- ***** Contact Form End ***** -->
+            </div>
+        </div>
+    </section>
+    <!-- ***** Contact Us End ***** -->
+    
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <ul class="social">
+                   
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <p >於2022年製作的專題</p>
+                </div>
+            </div>
+
+
+        </div>
+    </footer>
+    
+    <!-- jQuery -->
+    <script src="static/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="static/js/popper.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="static/js/scrollreveal.min.js"></script>
+    <script src="static/js/waypoints.min.js"></script>
+    <script src="static/js/jquery.counterup.min.js"></script>
+    <script src="static/js/imgfix.min.js"></script> 
+    
+    <!-- Global Init -->
+    <script src="static/js/custom.js"></script>
+
+
+
+    <script src="static/js/jquery.min.js"></script>
+        <script src="static/js/bootstrap.bundle.min.js"></script>
+        <script src="static/js/custom.js"></script>
+
+        <script> 
+            $(function(){
+                $('#BackTop').click(function(){ 
+                    $('html,body').animate({scrollTop:0}, 333);
+                });
+                $(window).scroll(function() {
+                    if ( $(this).scrollTop() > 300 ){
+                        $('#BackTop').fadeIn(222);
+                    } else {
+                        $('#BackTop').stop().fadeOut(222);
+                    }
+                }).scroll();
+            });
+         
+        </script>
+   
+  </body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+
+
+<html>
+	<head>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FFCGET6HE8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FFCGET6HE8');
+</script>
+		<title>個人空間-收藏文章</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/main.css" />
+		<style>
+			html {
+					scroll-behavior: smooth;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="{{url_for('index')}}">淡水旅行手札</a></h1>
+						<nav class="links">
+							<ul>
+								<li><a href="{{url_for('user')}}">個人空間</a></li>
+								<li><a href="{{url_for('userpost')}}">已發布文章</a></li>
+								<li><a href="{{url_for('userrough')}}">草稿文章</a></li>
+								<li><a href="{{url_for('userlike')}}">收藏文章</a></li>
+								
+						</nav>
+						<nav class="main">
+							<ul>
+								<li class="search">
+									<a class="fa-search" href="#search">Search</a>
+									<form id="search" method="get" action="#">
+										<input type="text" name="query" placeholder="查找文章" />
+									</form>
+								</li>
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<section id="menu">
+
+						<!-- Search -->
+							<section>
+								<form class="search" method="get" action="#">
+									<input type="text" name="query" placeholder="查找文章" />
+								</form>
+							</section>
+
+						<!-- Links -->
+							<section>
+								<ul class="links">
+									<li>
+										<a href="{{url_for('user')}}">
+											<h3>個人空間</h3>
+											<p>我的空間</p>
+										</a>
+									</li>
+									<li>
+										<a href="{{url_for('userpost')}}">
+											<h3>已發布文章</h3>
+											<p>您所寫過的所有貼文或文章</p>
+										</a>
+									</li>
+									<li>
+										<a href="{{url_for('userrough')}}">
+											<h3>草稿文章</h3>
+											<p>尚未發布的文章</p>
+										</a>
+									</li>
+									<li>
+										<a href="{{url_for('userlike')}}">
+											<h3>收藏文章</h3>
+											<p>喜歡的文章</p>
+										</a>
+									</li>
+									
+								</ul>
+							</section>
+
+						<!-- Actions -->
+							<section>
+								<ul class="actions stacked">
+									<li><a href="{{url_for('logout')}}" class="button large fit">登出</a></li>
+								</ul>
+							</section>
+
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+						{% for item in values %}
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2>{{item.head}}</h2>
+										<p>{{item.main}}</p>
+									</div>
+									<div class="meta">
+										
+										<a href="#" class="author"><span class="name">{{item.author}}</span> </a>
+									</div>
+								</header>
+								<p>{{item.body}}</p>
+								<footer>
+									<ul class="actions"></ul>
+									<ul class="stats">
+										<li>{{item.tag}}</li>
+									</ul>
+								</footer>
+							</article>
+							{% endfor %}
+
+							
+						<!-- Pagination
+							<ul class="actions pagination">
+								<li><a href="" class="disabled button large previous">上一頁</a></li>
+								<li><a href="#" class="button large next">下一頁</a></li>
+							</ul>
+
+							Pagination -->
+							
+								
+								
+							
+					</div>
+
+				<!-- Sidebar -->
+					<section id="sidebar">
+
+						<!-- Intro -->
+							<section id="intro">
+								
+								<header>
+									<h2>{{userid}}收藏文章</h2>
+									<p>這裡存放您喜歡的景點文章</p>
+								</header>
+							</section>
+
+
+						<!-- Footer -->
+							<section id="footer">
+								<ul class="icons">
+									<li><a href="https://www.facebook.com/tamsuiproject" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/tamsuiproject/"  target="_blank"class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									
+								</ul>
+								
+								<p >專題於2022年製作</p>
+							</section>
+
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/browser.min.js"></script>
+			<script src="static/js/breakpoints.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js"></script>
+
+		
+	</body>
+</html>

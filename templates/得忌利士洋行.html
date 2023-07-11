@@ -1,0 +1,296 @@
+{% import "bootstrap/wtf.html" as wtf %}
+<!DOCTYPE HTML>
+
+
+<html>
+	<head>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FFCGET6HE8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FFCGET6HE8');
+</script>
+		<title>淡水旅行手札-得忌利士洋行</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/main.css" />
+		<link rel="stylesheet" href="/lib/w3.css">
+
+		<style>
+			html {
+					scroll-behavior: smooth;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+						<article class="post">
+							<header>
+								<div class="title">
+									<h2>得忌利士洋行</h2>
+									<h3>老洋行，新淡水</h3>
+								</div>
+							
+							</header>
+							<span class="image main" style="padding:5px 5px; width: calc(100%);">
+								<div class="w3-content" style="max-width:800px">
+									<img class="mySlides" src="static/images/得忌利士洋行2.jpg" style="width:100%">
+									<img class="mySlides" src="static/images/得忌利士洋行1.jpg" style="width:100%">
+									<img class="mySlides" src="static/images/得忌利士洋行3.jpg" style="width:100%">
+									 
+								</div>
+								<div class="w3-center" style="margin-top: 20px;">
+									<center>
+									<button class="w3-btn demo" onclick="currentDiv(1)">1</button> 
+									<button class="w3-btn demo" onclick="currentDiv(2)">2</button> 
+									<button class="w3-btn demo" onclick="currentDiv(3)">3</button> 
+	 
+									</center>
+								  </div>
+							</span>								<span >
+								<p>路線：<br>捷運淡水站公車候車處搭乘紅26、836遊園公車，至「小白宮(淡水分局)站」下車，步行過馬路往淡水老街(捷運站)方向約100公尺。
+									自行開車或騎乘機車者可將車停放於：紅毛城收費停車場，再往回走向淡水老街方向，約300公尺即可到達。
+								</p>
+								<p>
+									淡水老街中正路末段，舊稱「烽火段」，早年淡水河水深，可以提供大型船隻，因此淡水在當時是很重要的港埠區域，因此洋行林立。「得忌利士洋行」，為淡水前五大洋行之一。
+									「得忌利士洋行」除具備一般洋行的貿易功能外，航運更是其主要業務，不僅見證淡水開港後的蓬勃發展，也在臺灣重要歷史事件中留下痕跡。馬偕博士來臺所搭乘的就是「得忌利士洋行」旗下的「海龍號」輪船。
+									
+
+								</p>
+								<p>大家可以進去館內參觀，更能親身體會歷史的痕跡。</p>
+						
+								<p>開放時間：<br>週一至週五 09:30—17:00
+									<br>週六、週日、國定假日 09:30—18:00
+								</p>
+
+
+				
+
+								<p>休館時間：<br>每月第一個星期一（逢國定假日照常開放，翌日休館）、農曆除夕、年初一、政府公告之天然災害停止上班日，其他必要之休館日將另行公告。</p>
+								
+							</span>
+							<div class="iframe-rwd">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.9072044026766!2d121.43473331484478!3d25.172610983907646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a55a7d734f13%3A0xda5a93a0b86f3533!2z5b6X5b-M5Yip5aOr5rSL6KGM!5e0!3m2!1szh-TW!2stw!4v1657957718879!5m2!1szh-TW!2stw" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							</div><footer>
+
+								
+								<ul class="actions">
+									<br>
+								</ul>
+							
+								<ul class="stats">
+									<li><a href="#">景點</a></li>
+									
+									
+								</ul>
+							</footer>
+						</article>
+						<article class="post">
+							<header>
+								<div class="title">
+									<h2>留言區</h2>
+									<h3>說說你的想法</h3>
+								</div>
+							
+							</header>
+							<form method="post" >
+								{{ wtf.quick_form(form) }}
+							</form>
+							
+							
+						</article>
+
+						<article class="post">
+							<header>
+								<div class="title">
+									<center>
+										<h2>留言版</h2>
+									</center>
+								</div>
+							
+							</header>
+						{% for item in messages%}
+						<p>
+							{{  item.name }}<br>
+							{{  item.body }}<br>
+							{{  item.timestamp }}<br></p>
+							<hr>
+						{% endfor %}
+						{% with messages = get_flashed_messages() %}
+						{% if messages %}
+						<ul class="flash">
+							{% for message in messages %}
+								<li>{{ message }}</li>
+								
+							{% endfor %}
+						</ul>
+						{% endif %}
+						{% endwith %}
+						</article>
+					</div>
+
+				<!-- Sidebar -->
+					<section id="sidebar">
+
+						<!-- Intro -->
+							<section id="intro">
+								
+								<header>
+									<h2><a href="{{ url_for('index') }}" >淡水旅行手札</a></h2>
+								
+								</header>
+							</section>
+
+						<!-- Mini Posts -->
+						<section>
+							<div class="mini-posts">
+								<h2>附近景點</h2>
+								<!-- Mini Post -->
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot1_2') }}">齊柏林空間 </a></h3>
+											<p>距離30公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot1_2') }}" class="image"><img src="static/images/齊柏林空間.jpg" alt="" /></a>
+									</article>
+
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot4_5') }}">水灣BALI 景觀餐廳-榕堤店  </a></h3>
+											<p>距離85公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot4_5') }}" class="image"><img src="static/images/水灣BALI 景觀餐廳-榕堤店1.jpg" alt="" /></a>
+									</article>
+
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot2_4') }}">多田榮吉故居 </a></h3>
+											<p>距離89公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot2_4') }}" class="image"><img src="static/images/多田榮吉故居.jpg" alt="" /></a>
+									</article>
+
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot4_13') }}">之間茶食器  </a></h3>
+											<p>距離105公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot4_13') }}" class="image"><img src="static/images/之間茶食器 01.jpg" alt="" /></a>
+									</article>
+									
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot3_7') }}">淡水長堤咖啡館</a></h3>
+											<p>距離140公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot3_7') }}" class="image"><img src="static/images/淡水長堤咖啡館3.jpg" alt="" /></a>
+									</article>
+								
+							</div>
+						</section>
+
+
+						
+						<!-- Footer -->
+							<section id="footer">
+								<ul class="icons">
+									<li><a href="https://www.facebook.com/tamsuiproject" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/tamsuiproject/"  target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<a href="#top" class=" button large " id="BackTop">最上面</a>
+								</ul>
+								
+								<p >專題於2022年製作</p>
+							</section>
+
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/browser.min.js"></script>
+			<script src="static/js/breakpoints.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js"></script>
+			<script>
+				var imgArray = [
+				'https://drive.google.com/uc?export=view&id=1ojOf6n0-w5HxdIZDCNnES2B5jAFB88X0',
+				'https://drive.google.com/uc?export=view&id=1zf7uwx3pxfD53acskSWcVeBfYdBiFd1u',
+				'https://drive.google.com/uc?export=view&id=1ABV6sJL0fC57-6VOfJQQRZ5IiMbzC-aY',
+
+			],
+				curIndex = 0;
+				imgDuration = 3000;
+			
+			function slideShow() {
+				document.getElementById('slider').className += "fadeOut";
+				setTimeout(function() {
+					document.getElementById('slider').src = imgArray[curIndex];
+					document.getElementById('slider').className = "";
+				},1000);
+				curIndex++;
+				if (curIndex == imgArray.length) { curIndex = 0; }
+				setTimeout(slideShow, imgDuration);
+			}
+			slideShow();
+		</script>
+		 <script>
+            $(function(){
+                $('#BackTop').click(function(){ 
+                    $('html,body').animate({scrollTop:0}, 333);
+                });
+                $(window).scroll(function() {
+                    if ( $(this).scrollTop() > 300 ){
+                        $('#BackTop').fadeIn(222);
+                    } else {
+                        $('#BackTop').stop().fadeOut(222);
+                    }
+                }).scroll();
+            });
+        </script>
+		
+<script>
+	var slideIndex = 1;
+	showDivs(slideIndex);
+	
+	function plusDivs(n) {
+	  showDivs(slideIndex += n);
+	}
+	
+	function currentDiv(n) {
+	  showDivs(slideIndex = n);
+	}
+	
+	function showDivs(n) {
+	  var i;
+	  var x = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("demo");
+	  if (n > x.length) {slideIndex = 1}    
+	  if (n < 1) {slideIndex = x.length} ;
+	  for (i = 0; i < x.length; i++) {
+		 x[i].style.display = "none";  
+	  }
+	  for (i = 0; i < dots.length; i++) {
+		 dots[i].className = dots[i].className.replace(" w3-red", "");
+	  }
+	  x[slideIndex-1].style.display = "block";  
+	  dots[slideIndex-1].className += " w3-red";
+		}
+	</script>
+	</body>
+</html>

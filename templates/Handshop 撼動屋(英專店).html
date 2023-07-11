@@ -1,0 +1,282 @@
+{% import "bootstrap/wtf.html" as wtf %}
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FFCGET6HE8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FFCGET6HE8');
+</script>
+		<title>淡水旅行手札-Handshop 撼動屋(英專店)</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/main.css" />
+		<link rel="stylesheet" href="/lib/w3.css">
+		<style>
+			html {
+					scroll-behavior: smooth;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+						<article class="post">
+							<header>
+								<div class="title">
+									<h2>Handshop 撼動屋(英專店)</h2>
+									<h3>小清新甜點店</h3>
+								</div>
+							
+							</header>
+
+							<span class="image main" style="padding:5px 5px; width: calc(100%);">
+								<div class="w3-content" style="max-width:800px">
+									<img class="mySlides" src="static/images/Handshop 撼動屋(英專店)3.jpg" style="width:100%">
+									<img class="mySlides" src="static/images/Handshop 撼動屋(英專店)2.jpg" style="width:100%">
+	 
+								</div>
+								 <div class="w3-center" style="margin-top: 20px;">
+									<center>
+									<button class="w3-btn demo" onclick="currentDiv(1)">1</button> 
+									<button class="w3-btn demo" onclick="currentDiv(2)">2</button> 
+								 
+									</center>
+								  </div>
+							</span>											<span >
+								<p>這裡是當地知名的手工甜點專賣店，鄰近捷運淡水站和淡江大學，很多外地人和學生爭相光顧。
+
+									這間店的外型為檸檬黃色，雖然位在巷子中，但是一眼望過去以能夠讓人的眼睛捕捉到。他的櫥窗讓室內景色一覽無疑，室內空間不大，也沒有硬塞座位，如果當天沒什麼人的話可以在裡面坐坐，店內提供免費wifi和插座，規定時間內是限時1.5小時，但是若是沒遇上客滿的狀況，也可以在裡面享受下午的時光。
+									
+									這間店的菜單上只有飲品，如果要點餐甜點類，要去櫃台點餐，旁邊的櫃子會展示所有蛋糕。
+									
+									歡迎大家可以來這裡消磨時光，或是將甜品外帶回家，甜點的口感不會辜負當地人的稱讚。
+									
+								</p>
+								<p>營業時間：13:30~20:00 (星期一休息)</p>
+							</span>
+							<div class="iframe-rwd">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.945160525354!2d121.44312061484489!3d25.171329483908217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a5fe8ccfa8c5%3A0xac4cb8250bf22e6b!2zSGFuZHNob3Dmkrzli5XlsYvvvIjoi7HlsIjlupfvvIk!5e0!3m2!1szh-TW!2stw!4v1658045292417!5m2!1szh-TW!2stw" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							</div><footer>
+
+								
+								<ul class="actions">
+									<br>
+								</ul>
+							
+								<ul class="stats">
+									<li><a href="#">景點</a></li>
+									
+									
+								</ul>
+							</footer>
+						</article>
+						<article class="post">
+							<header>
+								<div class="title">
+									<h2>留言區</h2>
+									<h3>說說你的想法</h3>
+								</div>
+							
+							</header>
+							<form method="post" >
+								{{ wtf.quick_form(form) }}
+							</form>
+							
+							
+						</article>
+
+						<article class="post">
+							<header>
+								<div class="title">
+									<center>
+										<h2>留言版</h2>
+									</center>
+								</div>
+							
+							</header>
+						{% for item in messages%}
+						<p>
+							{{  item.name }}<br>
+							{{  item.body }}<br>
+							{{  item.timestamp }}<br></p>
+							<hr>
+						{% endfor %}
+						{% with messages = get_flashed_messages() %}
+						{% if messages %}
+						<ul class="flash">
+							{% for message in messages %}
+								<li>{{ message }}</li>
+								
+							{% endfor %}
+						</ul>
+						{% endif %}
+						{% endwith %}
+						</article>
+					</div>
+
+				<!-- Sidebar -->
+					<section id="sidebar">
+
+						<!-- Intro -->
+							<section id="intro">
+								
+								<header>
+									<h2><a href="{{ url_for('index') }}" >淡水旅行手札</a></h2>
+								
+								</header>
+							</section>
+
+						<!-- Mini Posts -->
+						<section>
+							<div class="mini-posts">
+								<h2>附近景點</h2>
+								<!-- Mini Post -->
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot4_22') }}">一個人的披薩</a></h3>
+											<p>距離100公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot4_22') }}" class="image"><img src="static/images/一個人的披薩.jpg" alt="" /></a>
+									</article>
+
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot4_19') }}">DAPUNZ 達胖滋</a></h3>
+											<p>距離100公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot4_19') }}" class="image"><img src="static/images/blank.png" alt="" /></a>
+									</article>
+
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot4_26') }}">米特食堂MeetEuropa</a></h3>
+											<p>距離119公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot4_26') }}" class="image"><img src="static/images/米特食堂01.jpg" alt="" /></a>
+									</article>
+
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot5_5') }}">賴記雞蛋糕</a></h3>
+											<p>距離121公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot5_5') }}" class="image"><img src="static/images/賴記雞蛋糕.jpg" alt="" /></a>
+									</article>
+									
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot4_15') }}">Number 7 美式餐廳</a></h3>
+											<p>距離170公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot4_15') }}" class="image"><img src="static/images/Number 7美式餐廳02.jpg" alt="" /></a>
+									</article>
+								
+							</div>
+						</section>
+
+						
+						<!-- Footer -->
+							<section id="footer">
+								<ul class="icons">
+									<li><a href="https://www.facebook.com/tamsuiproject" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/tamsuiproject/"  target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<a href="#top" class=" button large " id="BackTop">最上面</a>
+								</ul>
+								
+								<p >專題於2022年製作</p>
+							</section>
+
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/browser.min.js"></script>
+			<script src="static/js/breakpoints.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js"></script>
+			<script>
+				var imgArray = [
+				'https://drive.google.com/uc?export=view&id=1RFLUB3eEjwBnHLr3ypyyc5pVyduiPtGx',
+				'https://drive.google.com/uc?export=view&id=1KrEOXYBUEBHEAmjUjLNG6GFIThIpnyPy',
+
+			],
+				curIndex = 0;
+				imgDuration = 3000;
+			
+			function slideShow() {
+				document.getElementById('slider').className += "fadeOut";
+				setTimeout(function() {
+					document.getElementById('slider').src = imgArray[curIndex];
+					document.getElementById('slider').className = "";
+				},1000);
+				curIndex++;
+				if (curIndex == imgArray.length) { curIndex = 0; }
+				setTimeout(slideShow, imgDuration);
+			}
+			slideShow();
+		</script>
+		 <script>
+            $(function(){
+                $('#BackTop').click(function(){ 
+                    $('html,body').animate({scrollTop:0}, 333);
+                });
+                $(window).scroll(function() {
+                    if ( $(this).scrollTop() > 300 ){
+                        $('#BackTop').fadeIn(222);
+                    } else {
+                        $('#BackTop').stop().fadeOut(222);
+                    }
+                }).scroll();
+            });
+        </script>
+		
+
+<script>
+	var slideIndex = 1;
+	showDivs(slideIndex);
+	
+	function plusDivs(n) {
+	  showDivs(slideIndex += n);
+	}
+	
+	function currentDiv(n) {
+	  showDivs(slideIndex = n);
+	}
+	
+	function showDivs(n) {
+	  var i;
+	  var x = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("demo");
+	  if (n > x.length) {slideIndex = 1}    
+	  if (n < 1) {slideIndex = x.length} ;
+	  for (i = 0; i < x.length; i++) {
+		 x[i].style.display = "none";  
+	  }
+	  for (i = 0; i < dots.length; i++) {
+		 dots[i].className = dots[i].className.replace(" w3-red", "");
+	  }
+	  x[slideIndex-1].style.display = "block";  
+	  dots[slideIndex-1].className += " w3-red";
+		}
+	</script>
+	</body>
+</html>

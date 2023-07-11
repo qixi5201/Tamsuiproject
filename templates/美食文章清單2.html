@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+
+
+<html>
+	<head>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FFCGET6HE8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FFCGET6HE8');
+</script>
+		<title>美食文章清單</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/main.css" />
+		<style>
+			html {
+					scroll-behavior: smooth;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						 
+						<nav class="links">
+							<ul>
+								<li><a href="{{ url_for('index') }}">GO!GO!E起粗乃玩</a></li>
+								<li><a href="https://www.instagram.com/tamsuiproject/" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.instagram.com/tamsuiproject/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="https://www.instagram.com/tamsuiproject/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							</ul>
+						</nav>
+						<nav class="main">
+							<ul>
+								<li class="search">
+									<a class="fa-search" href="#search">Search</a>
+									<form id="search" method="post" action="{{url_for('searchall')}}">
+										<input type="text" name="content" placeholder="查找文章" />
+									</form>
+								</li>
+								
+							</ul>
+						</nav>
+					</header>
+
+					
+
+				<!-- Main -->
+					<div id="main">
+						<center>
+							<h1 style="font-size: 45px; font-family:Source Sans Pro, Helvetica, sans-serif;"> 美食類文章</h1>
+					</center>
+					{% for item in values%}
+						<article class="post">
+							<header>
+								<div class="title">
+									<h2><a href="#">{{item.head}}</a></h2>
+									<p>{{item.main}}</p>
+								</div>
+								<div class="meta">
+									<time class="published" datetime="2022-4-23" style="font-size:15px">{{item.timestamp}}</time>
+									<a href="#" class="author"><span class="name">{{item.author}}</span> </a>
+								</div>
+									
+									
+							</header>
+							<p>{{item.body}}</p>
+							<footer>
+								<ul class="actions"></ul>
+								<ul class="stats">
+									<li>{{item.tag}}</li>
+									<li><a href="{{url_for('foodcollect', post_id=item.id)}}" class="button large">收藏</a></li>
+									<li><a href="{{url_for('foodlike', post_id=item.id)}}" class="icon solid fa-heart">{{item.like}}</a></li>
+								</ul>
+							</footer>
+						</article>
+						{% endfor %}
+ 
+						<!--
+							<ul class="actions pagination">
+								<li><a href="" class="disabled button large previous">上一頁</a></li>
+								<li><a href="#" class="button large next">下一頁</a></li>
+							</ul>
+					-->
+					<center><footer><p>專題於2022年製作</p></footer></center>
+								
+								
+							
+					</div>
+
+				 
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/browser.min.js"></script>
+			<script src="static/js/breakpoints.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js"></script>
+
+	</body>
+</html>

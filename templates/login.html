@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FFCGET6HE8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FFCGET6HE8');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <title>淡水旅行手札</title>
+</head>
+
+<body>
+    <section>
+
+            <div class="container">
+                <div class="form">
+                    <h2>登入 </h2>
+                    {% with messages = get_flashed_messages() %}
+						{% if messages %}
+						<ul class="flash">
+							{% for message in messages %}
+								<li>{{ message }}</li>
+								
+							{% endfor %}
+						</ul>
+						{% endif %}
+						{% endwith %}
+                    <form id="contact" action="{{url_for('login')}} " method="POST">
+                        {{ form.hidden_tag() }}
+                        <div class="inputBox">
+                            {{ form.userid.label }}{{ form.userid }}
+
+                        </div>
+                        <div class="inputBox">
+                            {{ form.email.label }}{{ form.email }}
+
+                        </div>
+                       
+                        <div class="inputBox">
+                            {{ form.password.label }}{{ form.password }}
+
+                        </div>
+                        <div class="inputBox" >
+                            {{ form.submit}}
+							
+                        </div>
+
+                        <p class="forget">沒有帳戶?<a href="{{ url_for('register') }}">
+                                註冊
+                            </a></p>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
+
+
+
+

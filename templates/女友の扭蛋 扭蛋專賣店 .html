@@ -1,0 +1,274 @@
+{% import "bootstrap/wtf.html" as wtf %}
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FFCGET6HE8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FFCGET6HE8');
+</script>
+		<title>淡水旅行手札-女友の扭蛋 扭蛋專賣店 </title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/main.css" />
+		<link rel="stylesheet" href="/lib/w3.css">
+		<style>
+			html {
+					scroll-behavior: smooth;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+						<article class="post">
+							<header>
+								<div class="title">
+									<h2>女友の扭蛋 扭蛋專賣店 </h2>
+									<h3>少女心天堂</h3>
+								</div>
+							
+							</header>
+							<span class="image main" style="padding:5px 5px; width: calc(100%);">
+								<div class="w3-content" style="max-width:800px">
+									<img class="mySlides" src="static/images/女友的扭蛋02.jpg" style="width:100%">
+									<img class="mySlides" src="static/images/女友的扭蛋01.jpg" style="width:100%">
+								</div>
+		
+								  <div class="w3-center" style="margin-top: 20px;">
+									<center>
+									<button class="w3-btn demo" onclick="currentDiv(1)">1</button> 
+									<button class="w3-btn demo" onclick="currentDiv(2)">2</button> 
+									
+									</center>
+								  </div>
+							</span>							
+							<span >
+								<p>這間扭蛋專賣店就在捷運站對面的大都會廣場旁吉野家隔壁的巷子中，從捷運站出站後走路只要一分鐘就會抵達。女友の扭蛋是一間充滿粉紅色氛圍氣息的專賣店，扭蛋專賣店除了有各式各樣的扭蛋以外，連扭蛋機也是可愛的粉紅色機台，只要一走進店內就能感受到滿滿的少女感，讓人少女心噴發。從店名就可以看出，這間超適合帶著男友一同前往。這間扭蛋專賣店總共有兩層樓，一樓跟二樓都充滿著幾乎不重樣的扭蛋機台，一樓的角落還有夾娃娃機跟兩間個人KTV，二樓也不單單只有機台，還有超適合打卡拍照的夢幻粉紅球池以及一旁的鞦韆。最後，扭完扭蛋後在二樓店家還有特別細心規劃的扭蛋拍照區，如果是喜歡扭蛋及拍照的人，一定不要錯過這間隱藏在巷子的粉紅色專賣店。
+								</p>	
+							</span>
+							<div class="iframe-rwd">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.0057029478853!2d121.44247061484481!3d25.16928528390917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a50d5ea9792f%3A0x2205776429ed90a7!2z5aWz5Y-L44Gu5omt6JuLIOaJreibi-S4gOeVquiznueOqeWFt-WwiOizo-W6lw!5e0!3m2!1szh-TW!2stw!4v1657885605404!5m2!1szh-TW!2stw" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							</div><footer>
+
+								
+								<ul class="actions">
+									<br>
+								</ul>
+							
+								<ul class="stats">
+									<li><a href="#">景點</a></li>
+									
+								</ul>
+							</footer>
+						</article>
+						<article class="post">
+							<header>
+								<div class="title">
+									<h2>留言區</h2>
+									<h3>說說你的想法</h3>
+								</div>
+							
+							</header>
+							<form method="post" >
+								{{ wtf.quick_form(form) }}
+							</form>
+							
+							
+						</article>
+
+						<article class="post">
+							<header>
+								<div class="title">
+									<center>
+										<h2>留言版</h2>
+									</center>
+								</div>
+							
+							</header>
+						{% for item in messages%}
+						<p>
+							{{  item.name }}<br>
+							{{  item.body }}<br>
+							{{  item.timestamp }}<br></p>
+							<hr>
+						{% endfor %}
+						{% with messages = get_flashed_messages() %}
+						{% if messages %}
+						<ul class="flash">
+							{% for message in messages %}
+								<li>{{ message }}</li>
+								
+							{% endfor %}
+						</ul>
+						{% endif %}
+						{% endwith %}
+						</article>
+					</div>
+
+				<!-- Sidebar -->
+					<section id="sidebar">
+
+						<!-- Intro -->
+							<section id="intro">
+								
+								<header>
+									<h2><a href="{{ url_for('index') }}" >淡水旅行手札</a></h2>
+								
+								</header>
+							</section>
+
+						<!-- Mini Posts -->
+						<section>
+							<div class="mini-posts">
+								<h2>附近景點</h2>
+								<!-- Mini Post -->
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot4_23') }}">魔法咖哩</a></h3>
+											<p>距離30公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot4_23') }}" class="image"><img src="static/images/魔法咖哩02.jpg" alt="" /></a>
+									</article>
+
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot5_9') }}">淡水滬尾豆花店 </a></h3>
+											<p>距離72公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot5_9') }}" class="image"><img src="static/images/淡水滬尾豆花店.jpg" alt="" /></a>
+									</article>
+
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot4_15') }}">Number 7 美式餐廳</a></h3>
+											<p>距離76公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot4_15') }}" class="image"><img src="static/images/Number 7美式餐廳02.jpg" alt="" /></a>
+									</article>
+
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot2_9') }}">淡水老街 </a></h3>
+											<p>距離77公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot2_9') }}" class="image"><img src="static/images/淡水老街.jpg" alt="" /></a>
+									</article>
+									
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot4_20') }}">雞道樂 </a></h3>
+											<p>距離118公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot4_20') }}" class="image"><img src="static/images/雞道樂.jpg" alt="" /></a>
+									</article>
+								
+							</div>
+						</section>
+
+						
+						<!-- Footer -->
+							<section id="footer">
+								<ul class="icons">
+									<li><a href="https://www.facebook.com/tamsuiproject" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/tamsuiproject/"  target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<a href="#top" class=" button large " id="BackTop">最上面</a>
+								</ul>
+								
+								<p >專題於2022年製作</p>
+							</section>
+
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/browser.min.js"></script>
+			<script src="static/js/breakpoints.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js"></script>
+			<script>
+				var imgArray = [
+				'https://drive.google.com/uc?export=view&id=1Dl6TZ28xGfTFd8w-OIpyDLxq5JkM2DuL',
+				'https://drive.google.com/uc?export=view&id=1dJEQqMTqMlkfm_w0AsMp8kLxbXGqSnDQ',
+				'https://drive.google.com/uc?export=view&id=16RFiZ81mXBh_J34J0qo5yjOD-QAzhC8-',
+				'https://drive.google.com/uc?export=view&id=1BXINXXqRWvbHAfJnBPMskk4arvN5bc-9',
+
+			],
+				curIndex = 0;
+				imgDuration = 3000;
+			
+			function slideShow() {
+				document.getElementById('slider').className += "fadeOut";
+				setTimeout(function() {
+					document.getElementById('slider').src = imgArray[curIndex];
+					document.getElementById('slider').className = "";
+				},1000);
+				curIndex++;
+				if (curIndex == imgArray.length) { curIndex = 0; }
+				setTimeout(slideShow, imgDuration);
+			}
+			slideShow();
+		</script>
+		 <script>
+            $(function(){
+                $('#BackTop').click(function(){ 
+                    $('html,body').animate({scrollTop:0}, 333);
+                });
+                $(window).scroll(function() {
+                    if ( $(this).scrollTop() > 300 ){
+                        $('#BackTop').fadeIn(222);
+                    } else {
+                        $('#BackTop').stop().fadeOut(222);
+                    }
+                }).scroll();
+            });
+        </script>
+		
+<script>
+	var slideIndex = 1;
+	showDivs(slideIndex);
+	
+	function plusDivs(n) {
+	  showDivs(slideIndex += n);
+	}
+	
+	function currentDiv(n) {
+	  showDivs(slideIndex = n);
+	}
+	
+	function showDivs(n) {
+	  var i;
+	  var x = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("demo");
+	  if (n > x.length) {slideIndex = 1}    
+	  if (n < 1) {slideIndex = x.length} ;
+	  for (i = 0; i < x.length; i++) {
+		 x[i].style.display = "none";  
+	  }
+	  for (i = 0; i < dots.length; i++) {
+		 dots[i].className = dots[i].className.replace(" w3-red", "");
+	  }
+	  x[slideIndex-1].style.display = "block";  
+	  dots[slideIndex-1].className += " w3-red";
+		}
+	</script>
+	</body>
+</html>

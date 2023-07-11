@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+
+
+<html>
+	<head>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FFCGET6HE8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FFCGET6HE8');
+</script>
+		<title>作者空間</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/main.css" />
+		<style>
+			html {
+					scroll-behavior: smooth;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="{{url_for('index')}}">淡水旅行手札</a></h1>
+						
+						
+					</header>
+
+				
+				<!-- Main -->
+					<div id="main">
+						
+							<center>
+								<div class="title" style="background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);">
+									<h2 style="font-size: 50px;">{{userid}}的空間</h2>
+									<p style="font-size: 20px;"> 屬於{{userid}}的空間</p>
+								</div>
+							</center>	
+									
+							
+							
+
+							<div class="bar-block">
+								<div class="container" >
+								 <center>
+								  <a href="javascript:void(0)" class="bar-item button tablink testbtn" onclick="openClass(event, 'class1')">已發布文章</a>
+								  <a href="javascript:void(0)" class="bar-item button tablink" onclick="openClass(event, 'class2')">收藏文章</a>
+								  <a href="javascript:void(0)" class="bar-item button tablink" onclick="openClass(event, 'class3')">喜歡文章</a>
+									</center>
+								 </div>
+							</div>
+							<hr>
+
+							  <div id="class1" class="container class">
+								{% for item in values1%}
+								<article class="post">
+									<header>
+										<div class="title">
+											<h2><a href="#">{{item.head}}</a></h2>
+											<p>{{item.main}}</p>
+										</div>
+										<div class="meta">
+											<time class="published" datetime="2022-4-23" style="font-size:15px">{{item.timestamp}}</time>
+											
+									</header>
+									
+									<p>{{item.body}}</p>
+									<footer>
+										<ul class="actions">
+											
+										</ul>
+										<ul class="stats">
+											<li>{{item.tag}}</a></li>
+											<li><a class="icon solid fa-heart" style="color:#ff589e;">{{item.like}}</a></li>
+											
+										</ul>
+									</footer>
+								</article>
+								{% endfor %}
+								
+							</div>
+							  
+							<div id="class2" class="container class">
+								{% for item in values2%}
+							  <article class="post">
+									<header>
+										<div class="title">
+											<h2><a href="#">{{item.head}}</a></h2>
+											<p>{{item.main}}</p>
+										</div>
+										<div class="meta">
+											<time class="published" datetime="2022-4-23" style="font-size:15px">{{item.timestamp}}</time>
+											
+									</header>
+									
+									<p>{{item.body}}</p>
+									<footer>
+										<ul class="actions">
+											
+										</ul>
+										<ul class="stats">
+											<li><a href="#">{{item.tag}}</a></li>
+											<li><a href="#" class="icon solid fa-heart">{{item.like}}</a></li>
+											
+										</ul>
+									</footer>
+								</article>
+								{% endfor %}
+							</div>
+							
+							<div id="class3" class="container class">
+								{% for item in values3%}
+								<article class="post">
+									<header>
+										<div class="title">
+											<h2><a href="#">{{item.head}}</a></h2>
+											<p>{{item.main}}</p>
+										</div>
+										<div class="meta">
+											<time class="published" datetime="2022-4-23" style="font-size:15px">{{item.timestamp}}</time>
+											
+									</header>
+									
+									<p>{{item.body}}</p>
+									<footer>
+										<ul class="actions">
+											
+										</ul>
+										<ul class="stats">
+											<li><a href="#">{{item.tag}}</a></li>
+											<li><a href="#" class="icon solid fa-heart">{{item.like}}</a></li>
+											
+										</ul>
+									</footer>
+								</article>
+								{% endfor %}
+							</div>
+							
+						
+					
+						<!-- Post -->
+						
+							
+							<center>
+								<a href="#top" class=" button large " id="BackTop">最上面</a>
+							<p style="padding: 5px;">專題於2022年製作</p>
+							</center>
+
+							
+							
+						<!-- Pagination
+							<ul class="actions pagination">
+								<li><a href="" class="disabled button large previous">上一頁</a></li>
+								<li><a href="#" class="button large next">下一頁</a></li>
+							</ul>
+
+							Pagination -->
+							
+								
+								
+							
+					</div>
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/browser.min.js"></script>
+			<script src="static/js/breakpoints.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js"></script>
+
+	</body>
+
+	<script>
+		function openClass(evt, className) {
+  var i, x, tablinks;
+  // x抓取頁面中的class="class"
+  x = document.getElementsByClassName("class");
+  //計算x的長度並將這些class="class"都進行display:none隱藏的動作
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  //tablinks 抓取頁面中的tablink
+  tablinks = document.getElementsByClassName("tablink");
+  //將tablinks代入for循環中並利用classList.remove刪除class="red" ，就是每執行一次function的時候就進行全部tablinks移除class="red"
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].classList.remove("red");
+  }
+  //document.getElementById=className(函數帶進來的參數)樣式設定為display:block; 當前點擊的a link執行function 顯示出來對應的內容。
+  document.getElementById(className).style.display = "block";
+  //並對當前點擊的 a link 新增“red” 這個class
+  evt.currentTarget.classList.add("red");
+}
+//預設testbtn 這個class頁面一加載後執行click();的動作。也就是點擊了testbtn有這個class的按鈕來執行上方寫的function 
+var mybtn = document.getElementsByClassName("testbtn")[0];
+mybtn.click();
+	</script>
+	<script>
+		$(function(){
+			$('#BackTop').click(function(){ 
+				$('html,body').animate({scrollTop:0}, 333);
+			});
+			$(window).scroll(function() {
+				if ( $(this).scrollTop() > 300 ){
+					$('#BackTop').fadeIn(222);
+				} else {
+					$('#BackTop').stop().fadeOut(222);
+				}
+			}).scroll();
+		});
+	</script>
+
+</html>

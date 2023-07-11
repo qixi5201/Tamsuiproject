@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FFCGET6HE8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FFCGET6HE8');
+</script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>淡水旅行手札-景點一覽</title>
+
+        <!-- CSS FILES -->      
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">                  
+        <link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="static/css/bootstrap-icons.css" rel="stylesheet">
+
+        <link href="static/css/tooplate-crispy-kitchen.css" rel="stylesheet">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    </head>
+    
+    <body>
+        <button type="button" id="BackTop" class="toTop-arrow"></button>
+
+        <nav class="navbar navbar-expand-lg bg-white shadow-lg">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <a class="navbar-brand" href="{{ url_for('index') }}">
+                    淡水旅行手札
+                </a>
+
+               
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('index') }}">首頁</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href=#區域1>景點</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link " href=#區域2>美食</a>
+                        </li>
+
+                        
+                       
+                    </ul>
+                </div>
+
+                
+
+            </div>
+        </nav>
+
+        <main>
+
+            <header class="site-header site-menu-header">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-10 col-12 mx-auto">
+                            <h1 class="text-white">所有景點</h1>
+
+                            <strong class="text-white">淡水值得推薦景點美食分類</strong>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="overlay"></div>
+            </header>
+
+            <section class="menu section-padding">
+                <div class="container" id="區域1">
+                    <div class="row">
+                        <div class="col-12">
+                              <h2 class="mb-lg-5 mb-4">景點</h2>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <a href="{{ url_for('areaone') }}">
+                            <div class="menu-thumb">
+                                   <div class="post">
+                                     <img src="static/images/木下靜涯舊居4.jpg" class="img-fluid menu-image" alt="">
+                                   </div>
+                                <div class="menu-info d-flex flex-wrap align-items-center">
+                                    <h4 class="mb-0">休閒景點</h4>  
+                                    
+                                     <div class="d-flex flex-wrap align-items-center w-100 mt-2">
+                                       <p>點此查看所有休閒景點</p>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <a href="{{ url_for('areatwo') }}">
+                            <div class="menu-thumb">
+                                   <div class="post">
+                                     <img src="static/images/淡水紅毛城_園區_英國領事館3.jpg" class="img-fluid menu-image" alt="">
+                                   </div>
+                                <div class="menu-info d-flex flex-wrap align-items-center">
+                                    <h4 class="mb-0">古蹟景點</h4>
+
+                                    <div class="d-flex flex-wrap align-items-center w-100 mt-2">
+                                       <p>點此查看所有古蹟景點</p>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+                         
+                     
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <a href="{{ url_for('userspot1') }}" class="custom-btn btn btn-secondary mt-2"style="font-size: 1.2em; ">點擊查看所有景點類文章</a>
+                         
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="menu section-padding ">
+                <div class="container"id="區域2">
+                    <div class="row">
+                        
+                        <div class="col-12">
+                             <h2 class="mb-lg-5 mb-4">美食</h2>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <a href="{{ url_for('areathree') }}">
+                            <div class="menu-thumb">
+                                   <div class="post">
+                                     <img src="static/images/水灣BALI 景觀餐廳-榕堤店2.jpg" class="img-fluid menu-image" alt="">
+                                   </div>
+                                <div class="menu-info d-flex flex-wrap align-items-center">
+                                    <h4 class="mb-0">咖啡廳</h4>
+
+                                    <div class="d-flex flex-wrap align-items-center w-100 mt-2">
+                                       <p>點此查看所有咖啡廳</p>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <a href="{{ url_for('areafour') }}">
+                            <div class="menu-thumb">
+                                   <div class="post">
+                                     <img src="static/images/魚見浜燒1.jpg" class="img-fluid menu-image" alt="">
+                                   </div>
+                                <div class="menu-info d-flex flex-wrap align-items-center">
+                                    <h4 class="mb-0">正餐</h4>
+
+                                    <div class="d-flex flex-wrap align-items-center w-100 mt-2">
+                                       <p>點此查看所有正餐</p>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+
+
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <a href="{{ url_for('areafive') }}">
+                            <div class="menu-thumb">
+                                   <div class="post">
+                                     <img src="static/images/新建成餅店.jpg" class="img-fluid menu-image" alt="">
+                                   </div>
+                                <div class="menu-info d-flex flex-wrap align-items-center">
+                                    <h4 class="mb-0">小吃</h4>
+
+                                    <div class="d-flex flex-wrap align-items-center w-100 mt-2">
+                                       <p>點此查看所有小吃</p>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            
+                         
+                        </div>
+                        <center>
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <a href="{{ url_for('userspot2') }}" class="custom-btn btn btn-secondary mt-2"style="font-size: 1.2em; ">點擊查看所有美食類文章</a>
+                         
+                        </div>
+                        </center>
+                    </div>
+                </div>
+            </section>
+
+      
+        </main>
+
+        <footer class="site-footer section-padding">
+            
+            <div class="container">
+                
+                <div class="row">
+
+                    <div class="col-12">
+                        <h4 class="text-white mb-4 me-5">淡水旅行手札</h4>
+                    </div>
+
+                    <div class="col-lg-4 col-md-7 col-xs-12 tooplate-mt30">
+                        <h6 class="text-white mb-lg-4 mb-3">組員</h6>
+
+                        <p>黃芸芸，陳育卿，李欣璉，戴幼喬</p>
+
+                       
+                    </div>
+
+                    <div class="col-lg-4 col-md-5 col-xs-12 tooplate-mt30">
+                        
+                        <h6 class="text-white mb-lg-4 mb-3">淡江大學官方網站</h6>
+                        <a href="https://www.tku.edu.tw/">點我傳送</a>
+                        <p class="mb-2" ></p>
+                        
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-xs-12 tooplate-mt30">
+                        <h6 class="text-white mb-lg-4 mb-3">聯絡我們</h6>
+
+                        <ul class="social-icon">
+                            <li><a href="https://www.facebook.com/tamsuiproject" target="_blank" class="social-icon-link bi-facebook"></a></li>
+
+                            <li><a href="https://www.instagram.com/tamsuiproject/"  target="_blank" class="social-icon-link bi-instagram"></a></li>
+
+                            
+                        </ul>
+                    
+                        <p >專題於2022年製作</p>
+                        
+                    </div>
+
+                </div><!-- row ending -->
+                
+             </div><!-- container ending -->
+             
+        </footer>
+
+      
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="static/js/jquery.min.js"></script>
+        <script src="static/js/bootstrap.bundle.min.js"></script>
+        <script src="static/js/custom.js"></script>
+        <script>
+            $(function(){
+                $('#BackTop').click(function(){ 
+                    $('html,body').animate({scrollTop:0}, 333);
+                });
+                $(window).scroll(function() {
+                    if ( $(this).scrollTop() > 300 ){
+                        $('#BackTop').fadeIn(222);
+                    } else {
+                        $('#BackTop').stop().fadeOut(222);
+                    }
+                }).scroll();
+            });
+        </script>
+    
+    </body>
+</html>

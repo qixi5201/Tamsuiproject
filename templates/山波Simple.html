@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FFCGET6HE8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FFCGET6HE8');
+</script>
+		<title>淡水旅行手札-山波Simple 
+		</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/main-1.css" />
+		<noscript><link rel="stylesheet" href="static/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="{{ url_for('index') }}" class="logo">
+									<span class="title">淡水旅行手札</span>
+								</a>
+
+							<!-- Nav -->
+								
+								
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+				
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>山波Simple </h1>
+							<span class="image main" style="padding:5px 5px; width: 1000px; height: 700px;"><img id="slider" src=""></span>
+                           <span >
+								<p>山波Simple 是一間在真理大學附近的咖啡廳，從淡水捷運站出站後轉乘紅36公車，在常春藤社區下車後，步行約3分鐘後就會抵達這間甜點店，也可以選擇紅38、紅51或894號公車在真理大學站下車，下車後也只須走2分鐘就會到。山波Simple 取自諧音山坡，因為咖啡聽就開在山坡上，同時也有讓客人品嘗這邊的甜點後會留下餘波之意。山波Simple 的店面主要色調是白色，門口是一片大落地窗，白牆加上木製窗框還有周圍的綠色盆栽，充滿著清新又舒活的氛圍。菜單上提供咖啡、茶品、果汁、還有許多不同的蛋糕及甜點，價格上約落在120~180之間。山波Simple 的蛋糕或是飲品都十分好吃，到淡水除了去古蹟景點一外，也可以來這間山坡上的咖啡廳，享受一下愜意的下午以及精緻的甜點。
+
+
+
+								</p>	
+							</span>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.6956951604607!2d121.4349415148449!3d25.179750983904274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a537d5df8975%3A0xc11ad0f8849f696e!2z5bGx5rOi!5e0!3m2!1szh-TW!2stw!4v1658044122947!5m2!1szh-TW!2stw" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						</div>
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">          
+					<div class="inner">
+						
+						<section>
+							<h2>聯絡我們</h2>
+							<ul class="icons">
+								<li><a href="https://www.instagram.com/informationforensic/" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.instagram.com/informationforensic/" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="https://www.instagram.com/informationforensic/" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+							
+							</ul>
+						</section>
+						
+						<p>專題於2022年製作</p>
+					</div>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/browser.min.js"></script>
+			<script src="static/js/breakpoints.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js"></script>
+			<script>
+			var imgArray = [
+			'https://drive.google.com/uc?export=view&id=1uv7FvPiD4f0r8-F1jMtZCcRoFAcID9K8',
+			
+			],
+			curIndex = 0;
+			imgDuration = 3000;
+		
+		function slideShow() {
+			document.getElementById('slider').className += "fadeOut";
+			setTimeout(function() {
+				document.getElementById('slider').src = imgArray[curIndex];
+				document.getElementById('slider').className = "";
+			},1000);
+			curIndex++;
+			if (curIndex == imgArray.length) { curIndex = 0; }
+			setTimeout(slideShow, imgDuration);
+		}
+		slideShow();
+	</script>
+	</body>
+</html>

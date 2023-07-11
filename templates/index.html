@@ -1,0 +1,200 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FFCGET6HE8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FFCGET6HE8');
+</script>
+		<title>個人空間</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/main.css" />
+		<style>
+			html {
+					scroll-behavior: smooth;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="{{url_for('index')}}">淡水旅行手札</a></h1>
+						<nav class="links">
+							<ul>
+								<li><a href="{{url_for('user')}}">個人空間</a></li>
+								<li><a href="{{url_for('userpost')}}">已發布文章</a></li>
+								<li><a href="{{url_for('userrough')}}">草稿文章</a></li>
+								<li><a href="{{url_for('userlike')}}">收藏文章</a></li>
+						</nav>
+						<nav class="main">
+							<ul>
+								<li class="search">
+									<a class="fa-search" href="#search">Search</a>
+									<form id="search" method="post" action="{{url_for('search')}}">
+										<input type="text" name="content" placeholder="查找文章" />
+									</form>
+								</li>
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<section id="menu">
+
+						<!-- Search -->
+							<section>
+								<form class="search" method="post" action="{{url_for('search')}}">
+									<input type="text" name="content" placeholder="查找文章" />
+								</form>
+							</section>
+
+						<!-- Links -->
+							<section>
+								<ul class="links">
+									<li>
+										<a href="{{url_for('user')}}">
+											<h3>個人空間</h3>
+											<p>我的空間</p>
+										</a>
+									</li>
+									<li>
+										<a href="{{url_for('userpost')}}">
+											<h3>已發布文章</h3>
+											<p>您所寫過的所有貼文或文章</p>
+										</a>
+									</li>
+									<li>
+										<a href="{{url_for('userrough')}}">
+											<h3>草稿文章</h3>
+											<p>尚未發布的文章</p>
+										</a>
+									</li>
+									<li>
+										<a href="{{url_for('userlike')}}">
+											<h3>收藏文章</h3>
+											<p>喜歡的文章</p>
+										</a>
+									</li>
+								</ul>
+							</section>
+
+						<!-- Actions -->
+							<section>
+								<ul class="actions stacked">
+									<li><a href="{{url_for('logout')}}" class="button large fit">登出</a></li>
+								</ul>
+							</section>
+
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+						{% for item in values%}
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2><a href="#">{{item.head}}</a></h2>
+										<p>{{item.main}}</p>
+									</div>
+									<div class="meta">
+										<time class="published" datetime="2022-4-23" style="font-size:15px">{{item.timestamp}}</time>
+									</div>
+								</header>
+								<p>{{item.body}}</p>
+								<footer>
+									<ul class="actions"></ul>
+									<ul class="stats">
+										<li>{{item.tag}}</li>
+										<li><p class="icon solid fa-heart">{{item.like}}</p></li>
+									</ul>
+								</footer>
+							</article>
+							{% endfor %}
+					</div>
+
+				<!-- Sidebar -->
+					<section id="sidebar">
+
+						<!-- Intro -->
+							<section id="intro">
+								
+								<header>
+									<h2>{{userid}}的個人空間</h2>
+									<p>這裡是屬於你的空間，看看屬於你的回憶</p>
+								</header>
+							</section>
+
+						<!-- Mini Posts -->
+							<section>
+								<div class="mini-posts">
+									<h2>推薦給你的景點</h2>
+									<!-- Mini Post -->
+									{% for item in values1%}
+										<article class="mini-post">
+											<header>
+												<h3><a href="{{item.url}}">{{item.head}}</a></h3>
+												<p>{{item.main}}</p>
+											</header>
+											<a href="{{item.url}}" class="image"><img src="{{item.pic}}" alt="" /></a>
+										</article>
+										{% endfor %}
+									<!-- Mini Post -->
+								</div>
+							</section>
+
+						
+
+				
+
+						<!-- Footer -->
+							<section id="footer">
+								<ul class="icons">
+									 
+									<li><a href="https://www.facebook.com/tamsuiproject" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/tamsuiproject/"  target="_blank"class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<a href="#top" class=" button large "id="BackTop">最上面</a>
+								</ul>
+								
+								<p >專題於2022年製作</p>
+							</section>
+
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/browser.min.js"></script>
+			<script src="static/js/breakpoints.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js"></script>
+			
+	</body>
+	<script>
+		$(function(){
+			$('#BackTop').click(function(){ 
+				$('html,body').animate({scrollTop:0}, 333);
+			});
+			$(window).scroll(function() {
+				if ( $(this).scrollTop() > 300 ){
+					$('#BackTop').fadeIn(222);
+				} else {
+					$('#BackTop').stop().fadeOut(222);
+				}
+			}).scroll();
+		});
+	</script>
+</html>

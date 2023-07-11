@@ -1,0 +1,275 @@
+{% import "bootstrap/wtf.html" as wtf %}
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FFCGET6HE8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FFCGET6HE8');
+</script>
+		<title>淡水旅行手札-淡水雲門星巴克</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/main.css" />
+		<link rel="stylesheet" href="/lib/w3.css">
+		<style>
+			html {
+					scroll-behavior: smooth;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+						<article class="post">
+							<header>
+								<div class="title">
+									<h2>淡水雲門星巴克</h2>
+									<h3>森林系星巴克</h3>
+								</div>
+							
+							</header>
+
+							<span class="image main" style="padding:5px 5px; width: calc(100%);">
+								<div class="w3-content" style="max-width:800px">
+									<img class="mySlides" src="static/images/淡水雲門星巴克.jpg" style="width:100%">
+									<img class="mySlides" src="static/images/淡水雲門星巴克2.jpg" style="width:100%">
+								 
+								</div>
+								<div class="w3-center" style="margin-top: 20px;">
+									<center>
+									<button class="w3-btn demo" onclick="currentDiv(1)">1</button> 
+									<button class="w3-btn demo" onclick="currentDiv(2)">2</button> 
+								 
+									</center>
+								  </div>
+							</span>			
+							<span >
+								<p>淡水雲門星巴克位在雲門舞集旁邊，是個知名的打卡景點，也是淡水最美的星巴克門市。搭配上雲門劇場的藝術文化和門外的綠意盎然環繞景色，為淡水雲門星巴克營造出極為舒適的放鬆場域。星巴克淡水雲門門市為一間斜屋頂造型的玻璃屋，店內從吧台到座位區是以流線型設計，同時與門市外的蓮花池雕像意象相互呼應。整間門市採光很好，店內被多方向的大落地窗環繞，再加上玻璃斜屋頂設計，能讓陽光灑落進來，透過玻璃，顧客也可以順便欣賞窗外的大自然風景。假日時常常一位難求，因此不少人會自備野餐墊在雲門劇場前的此草坪野餐，若是有機會的話可以到這間門市感受一下舒心下午茶時光。
+
+
+								</p>	
+							</span>
+							<div class="iframe-rwd">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.662755104456!2d121.42606861484501!3d25.180862783903784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a54e90a2a42b%3A0x65a63ff8024f2625!2zU1RBUkJVQ0tTIOaYn-W3tOWFiyAo5reh5rC06Zuy6ZaA6ZaA5biCKQ!5e0!3m2!1szh-TW!2stw!4v1658915852255!5m2!1szh-TW!2stw" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>							<footer>
+								</div>
+								<footer>
+								<ul class="actions">
+									<br>
+								</ul>
+							
+								<ul class="stats">
+									<li><a href="#">景點</a></li>
+									
+									
+								</ul>
+							</footer>
+						</article>
+					</article>
+					<article class="post">
+						<header>
+							<div class="title">
+								<h2>留言區</h2>
+								<h3>說說你的想法</h3>
+							</div>
+						
+						</header>
+						<form method="post" >
+							{{ wtf.quick_form(form) }}
+						</form>
+						
+						
+					</article>
+
+					<article class="post">
+						<header>
+							<div class="title">
+								<center>
+									<h2>留言版</h2>
+								</center>
+							</div>
+						
+						</header>
+					{% for item in messages%}
+					<p>
+						{{  item.name }}<br>
+						{{  item.body }}<br>
+						{{  item.timestamp }}<br></p>
+						<hr>
+					{% endfor %}
+					{% with messages = get_flashed_messages() %}
+					{% if messages %}
+					<ul class="flash">
+						{% for message in messages %}
+							<li>{{ message }}</li>
+							
+						{% endfor %}
+					</ul>
+					{% endif %}
+					{% endwith %}
+					</article>
+					</div>
+
+				<!-- Sidebar -->
+					<section id="sidebar">
+
+						<!-- Intro -->
+							<section id="intro">
+								
+								<header>
+									<h2><a href="{{ url_for('index') }}" >淡水旅行手札</a></h2>
+								
+								</header>
+							</section>
+
+						<!-- Mini Posts -->
+							<section>
+								<div class="mini-posts">
+									<h2>附近景點</h2>
+									<!-- Mini Post -->
+										<article class="mini-post">
+											<header>
+												<h3><a href="{{ url_for('spot1_7') }}">雲門舞集-雲門劇場 </a></h3>
+												<p>距離81公尺</p>
+												
+											</header>
+											<a href="{{ url_for('spot1_7') }}" class="image"><img src="static/images/雲門舞集-雲門劇場1.jpg" alt="" /></a>
+										</article>
+
+										<article class="mini-post">
+											<header>
+												<h3><a href="{{ url_for('spot2_6') }}">滬尾砲台 </a></h3>
+												<p>距離202公尺</p>
+												
+											</header>
+											<a href="{{ url_for('spot2_6') }}" class="image"><img src="static/images/滬尾砲台公園4.jpg" alt="" /></a>
+										</article>
+
+										<article class="mini-post">
+											<header>
+												<h3><a href="{{ url_for('spot3_14') }}">媽媽嘴咖啡(淡水樂活店)</a></h3>
+												<p>距離309公尺</p>
+												
+											</header>
+											<a href="{{ url_for('spot3_14') }}" class="image"><img src="static/images/媽媽嘴咖啡(淡水樂活店) 2.jpg" alt="" /></a>
+										</article>
+
+										<article class="mini-post">
+											<header>
+												<h3><a href="{{ url_for('spot1_6') }}">淡水和平公園 </a></h3>
+												<p>距離329公尺</p>
+												
+											</header>
+											<a href="{{ url_for('spot1_6') }}" class="image"><img src="static/images/淡水和平公園 .jpg" alt="" /></a>
+										</article>
+										
+										<article class="mini-post">
+											<header>
+												<h3><a href="{{ url_for('spot2_8') }}">一滴水紀念館 </a></h3>
+												<p>距離377公尺</p>
+												
+											</header>
+											<a href="{{ url_for('spot2_8') }}" class="image"><img src="static/images/一滴水紀念館1.jpg" alt="" /></a>
+										</article>
+									
+								</div>
+							</section>
+
+						
+						<!-- Footer -->
+							<section id="footer">
+								<ul class="icons">
+									<li><a href="https://www.facebook.com/tamsuiproject" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/tamsuiproject/"  target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<a href="#top" class=" button large " id="BackTop">最上面</a>
+								</ul>
+								
+								<p >專題於2022年製作</p>
+							</section>
+
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/browser.min.js"></script>
+			<script src="static/js/breakpoints.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js"></script>
+			<script>
+				var imgArray = [
+				'https://drive.google.com/uc?export=view&id=1uv7FvPiD4f0r8-F1jMtZCcRoFAcID9K8',
+
+			],
+				curIndex = 0;
+				imgDuration = 3000;
+			
+			function slideShow() {
+				document.getElementById('slider').className += "fadeOut";
+				setTimeout(function() {
+					document.getElementById('slider').src = imgArray[curIndex];
+					document.getElementById('slider').className = "";
+				},1000);
+				curIndex++;
+				if (curIndex == imgArray.length) { curIndex = 0; }
+				setTimeout(slideShow, imgDuration);
+			}
+			slideShow();
+		</script>
+		 <script>
+            $(function(){
+                $('#BackTop').click(function(){ 
+                    $('html,body').animate({scrollTop:0}, 333);
+                });
+                $(window).scroll(function() {
+                    if ( $(this).scrollTop() > 300 ){
+                        $('#BackTop').fadeIn(222);
+                    } else {
+                        $('#BackTop').stop().fadeOut(222);
+                    }
+                }).scroll();
+            });
+        </script>
+		
+<script>
+	var slideIndex = 1;
+	showDivs(slideIndex);
+	
+	function plusDivs(n) {
+	  showDivs(slideIndex += n);
+	}
+	
+	function currentDiv(n) {
+	  showDivs(slideIndex = n);
+	}
+	
+	function showDivs(n) {
+	  var i;
+	  var x = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("demo");
+	  if (n > x.length) {slideIndex = 1}    
+	  if (n < 1) {slideIndex = x.length} ;
+	  for (i = 0; i < x.length; i++) {
+		 x[i].style.display = "none";  
+	  }
+	  for (i = 0; i < dots.length; i++) {
+		 dots[i].className = dots[i].className.replace(" w3-red", "");
+	  }
+	  x[slideIndex-1].style.display = "block";  
+	  dots[slideIndex-1].className += " w3-red";
+		}
+	</script>
+	</body>
+</html>

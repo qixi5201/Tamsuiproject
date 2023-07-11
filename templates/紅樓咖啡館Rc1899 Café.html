@@ -1,0 +1,276 @@
+{% import "bootstrap/wtf.html" as wtf %}
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FFCGET6HE8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FFCGET6HE8');
+</script>
+		<title>淡水旅行手札-紅樓咖啡館Rc1899 Café</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/main.css" />
+		<link rel="stylesheet" href="/lib/w3.css">
+		<style>
+			html {
+					scroll-behavior: smooth;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+						<article class="post">
+							<header>
+								<div class="title">
+									<h2>紅樓咖啡館Rc1899 Café</h2>
+									<h3>紅磚老宅風格咖啡廳</h3>
+								</div>
+							
+							</header>
+
+							<span class="image main" style="padding:5px 5px; width: calc(100%);">
+								<div class="w3-content" style="max-width:800px">
+									<img class="mySlides" src="static/images/紅樓咖啡館Rc1899 Café3.jpg" style="width:100%">
+									<img class="mySlides" src="static/images/紅樓咖啡館Rc1899 Café1.jpg" style="width:100%">
+									<img class="mySlides" src="static/images/紅樓咖啡館Rc1899 Café2.jpg" style="width:100%">
+						
+								</div>
+								<div class="w3-center" style="margin-top: 20px;">
+									<center>
+									<button class="w3-btn demo" onclick="currentDiv(1)">1</button> 
+									<button class="w3-btn demo" onclick="currentDiv(2)">2</button> 
+									<button class="w3-btn demo" onclick="currentDiv(3)">3</button> 
+								
+									</center>
+								  </div>
+							</span>								<span >
+								<p>紅樓建於1895年，於1899年完工，至今已有百年歷史，建築以英式維多利亞風格為外觀，擁有老建築紅磚的特色風格，一、二樓為中餐廳，三樓為西式咖啡廳。因為紅樓咖啡廳位在三樓，室內有三面大落地窗的設計，擁有將附近景色從高處一覽無遺的特色。紅樓咖啡廳位置身處在沒有車水馬龍和雜鬧的環境中，想要悠閒的喝杯咖啡這裡是一個不錯的選擇。若是在晚間前往，窗外的景色會從原本的一片藍變成燈光點綴的黑色夜景。咖啡廳商品有義大利麵、燉飯、三明治等等，價格多位在180~300之間，飲料部分則價格多為100~200之間。紅樓咖啡廳店內空間簡單舒適，加上燈光和窗外的風景，讓咖啡廳內十分有氣氛。
+
+
+								</p>	
+							</span>
+							<div class="iframe-rwd">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.9478231617463!2d121.43722021484477!3d25.171239583908214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a5574f560369%3A0x6567c8c1eca11afa!2z5reh5rC057SF5qiT5ZKW5ZWh6aSo!5e0!3m2!1szh-TW!2stw!4v1658043393188!5m2!1szh-TW!2stw" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							</div><footer>
+
+								
+								<ul class="actions">
+									<br>
+								</ul>
+							
+								<ul class="stats">
+									<li><a href="#">景點</a></li>
+									
+									
+								</ul>
+							</footer>
+						</article>
+						<article class="post">
+							<header>
+								<div class="title">
+									<h2>留言區</h2>
+									<h3>說說你的想法</h3>
+								</div>
+							
+							</header>
+							<form method="post" >
+								{{ wtf.quick_form(form) }}
+							</form>
+							
+							
+						</article>
+
+						<article class="post">
+							<header>
+								<div class="title">
+									<center>
+										<h2>留言版</h2>
+									</center>
+								</div>
+							
+							</header>
+						{% for item in messages%}
+						<p>
+							{{  item.name }}<br>
+							{{  item.body }}<br>
+							{{  item.timestamp }}<br></p>
+							<hr>
+						{% endfor %}
+						{% with messages = get_flashed_messages() %}
+						{% if messages %}
+						<ul class="flash">
+							{% for message in messages %}
+								<li>{{ message }}</li>
+								
+							{% endfor %}
+						</ul>
+						{% endif %}
+						{% endwith %}
+						</article>
+					</div>
+
+				<!-- Sidebar -->
+					<section id="sidebar">
+
+						<!-- Intro -->
+							<section id="intro">
+								
+								<header>
+									<h2><a href="{{ url_for('index') }}" >淡水旅行手札</a></h2>
+								
+								</header>
+							</section>
+
+						<!-- Mini Posts -->
+						<section>
+							<div class="mini-posts">
+								<h2>附近景點</h2>
+								<!-- Mini Post -->
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot1_1') }}">木下靜涯舊居</a></h3>
+											<p>距離18公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot1_1') }}" class="image"><img src="static/images/木下靜涯舊居1.jpg" alt="" /></a>
+									</article>
+
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot5_8') }}">源味本鋪古早味現烤蛋糕</a></h3>
+											<p>距離65公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot5_8') }}" class="image"><img src="static/images/源味本舖古早味現烤蛋糕.jpg" alt="" /></a>
+									</article>
+
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot2_3') }}">日本警官宿舍</a></h3>
+											<p>距離74公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot2_3') }}" class="image"><img src="static/images/日本警官宿舍01.jpg" alt="" /></a>
+									</article>
+
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot5_10') }}">麻吉奶奶鮮奶麻糬</a></h3>
+											<p>距離91公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot5_10') }}" class="image"><img src="static/images/麻吉奶奶鮮奶麻糬.jpg" alt="" /></a>
+									</article>
+									
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot2_11') }}">滬尾偕醫館</a></h3>
+											<p>距離102公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot2_11') }}" class="image"><img src="static/images/滬尾偕醫館.jpg" alt="" /></a>
+									</article>
+								
+							</div>
+						</section>
+						
+						<!-- Footer -->
+							<section id="footer">
+								<ul class="icons">
+									<li><a href="https://www.facebook.com/tamsuiproject" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/tamsuiproject/"  target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<a href="#top" class=" button large " id="BackTop">最上面</a>
+								</ul>
+								
+								<p >專題於2022年製作</p>
+							</section>
+
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/browser.min.js"></script>
+			<script src="static/js/breakpoints.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js"></script>
+			<script>
+				var imgArray = [
+				'https://drive.google.com/uc?export=view&id=1AebQAXx31TpKBF2uFcbl-xY2BDazdzJD',
+				'https://drive.google.com/uc?export=view&id=1xKqpUNGdDBSGIZnqO2HpMmMMfWUsvqmb',
+
+			],
+				curIndex = 0;
+				imgDuration = 3000;
+			
+			function slideShow() {
+				document.getElementById('slider').className += "fadeOut";
+				setTimeout(function() {
+					document.getElementById('slider').src = imgArray[curIndex];
+					document.getElementById('slider').className = "";
+				},1000);
+				curIndex++;
+				if (curIndex == imgArray.length) { curIndex = 0; }
+				setTimeout(slideShow, imgDuration);
+			}
+			slideShow();
+		</script>
+		 <script>
+            $(function(){
+                $('#BackTop').click(function(){ 
+                    $('html,body').animate({scrollTop:0}, 333);
+                });
+                $(window).scroll(function() {
+                    if ( $(this).scrollTop() > 300 ){
+                        $('#BackTop').fadeIn(222);
+                    } else {
+                        $('#BackTop').stop().fadeOut(222);
+                    }
+                }).scroll();
+            });
+        </script>
+		
+<script>
+	var slideIndex = 1;
+	showDivs(slideIndex);
+	
+	function plusDivs(n) {
+	  showDivs(slideIndex += n);
+	}
+	
+	function currentDiv(n) {
+	  showDivs(slideIndex = n);
+	}
+	
+	function showDivs(n) {
+	  var i;
+	  var x = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("demo");
+	  if (n > x.length) {slideIndex = 1}    
+	  if (n < 1) {slideIndex = x.length} ;
+	  for (i = 0; i < x.length; i++) {
+		 x[i].style.display = "none";  
+	  }
+	  for (i = 0; i < dots.length; i++) {
+		 dots[i].className = dots[i].className.replace(" w3-red", "");
+	  }
+	  x[slideIndex-1].style.display = "block";  
+	  dots[slideIndex-1].className += " w3-red";
+		}
+	</script>
+	</body>
+</html>

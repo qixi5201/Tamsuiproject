@@ -1,0 +1,284 @@
+{% import "bootstrap/wtf.html" as wtf %}
+<!DOCTYPE HTML>
+
+
+<html>
+	<head>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FFCGET6HE8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FFCGET6HE8');
+</script>
+		<title>淡水旅行手札-淡水長堤咖啡館</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/main.css" />
+		<link rel="stylesheet" href="/lib/w3.css">
+		<style>
+			html {
+					scroll-behavior: smooth;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+						<article class="post">
+							<header>
+								<div class="title">
+									<h2>淡水長堤咖啡館</h2>
+									<h3>河景第一排賞日落</h3>
+								</div>
+							
+							</header>
+
+							<span class="image main" style="padding:5px 5px; width: calc(100%);">
+								<div class="w3-content" style="max-width:800px">
+									<img class="mySlides" src="static/images/淡水長堤咖啡館3.jpg" style="width:100%">
+									<img class="mySlides" src="static/images/淡水長堤咖啡館4.jpg" style="width:100%">
+								 
+								</div>	
+								<div class="w3-center" style="margin-top: 20px;">
+									<center>
+									<button class="w3-btn demo" onclick="currentDiv(1)">1</button> 
+									<button class="w3-btn demo" onclick="currentDiv(2)">2</button> 
+									 
+									</center>
+								  </div>
+							</span>								<span >
+								<p>淡水長堤咖啡館就在淡水河旁，從淡水捷運站步行只要15分鐘，是間很唯美的看海秘境，餐廳裝潢得很有質感，想要看淡水河景吃美食，淡水長堤咖啡館是可以考慮的地點。淡水長堤咖啡館視野正對對岸的八里，無論是山、河景還是夕陽，都能在這間咖啡廳欣賞到讓人為之怦然的景色。淡水長堤咖啡館提供義大利麵、燉飯、漢堡等主食，也有三明治、鬆餅等輕食，飲料部分有咖啡、茶品、冰沙，選項十分多元。淡水長堤咖啡館有一樓及二樓，一樓有分室內外，室內空間明亮且乾淨寬敞，戶外座位能直接與淡水河相伴，感受迎面吹來的微風，享受度假氛圍，二樓則是淡水河絕佳的觀景平台，是絕對必拍的地方，若是喜歡拍照的人一定要來淡水長堤咖啡館。
+
+
+								</p>
+							</span>
+							<div class="iframe-rwd">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.9091859257983!2d121.43341891484472!3d25.17254408390758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a55a9629747b%3A0x1e224e1c8b0e6f9d!2z5reh5rC06ZW35aCk5ZKW5ZWh6aSQ6aSoTEIgQ2FmZQ!5e0!3m2!1szh-TW!2stw!4v1658043685822!5m2!1szh-TW!2stw" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							</div><footer>
+
+								
+								<ul class="actions">
+									<br>
+								</ul>
+							
+								<ul class="stats">
+									<li><a href="#">景點</a></li>
+									
+									
+								</ul>
+							</footer>
+						</article>
+						<article class="post">
+							<header>
+								<div class="title">
+									<h2>留言區</h2>
+									<h3>說說你的想法</h3>
+								</div>
+							
+							</header>
+							<form method="post" >
+								{{ wtf.quick_form(form) }}
+							</form>
+							
+							
+						</article>
+
+						<article class="post">
+							<header>
+								<div class="title">
+									<center>
+										<h2>留言版</h2>
+									</center>
+								</div>
+							
+							</header>
+						{% for item in messages%}
+						<p>
+							{{  item.name }}<br>
+							{{  item.body }}<br>
+							{{  item.timestamp }}<br></p>
+							<hr>
+						{% endfor %}
+						{% with messages = get_flashed_messages() %}
+						{% if messages %}
+						<ul class="flash">
+							{% for message in messages %}
+								<li>{{ message }}</li>
+								
+							{% endfor %}
+						</ul>
+						{% endif %}
+						{% endwith %}
+						</article>
+					</div>
+
+				<!-- Sidebar -->
+					<section id="sidebar">
+
+						<!-- Intro -->
+							<section id="intro">
+								
+								<header>
+									<h2><a href="{{ url_for('index') }}" >淡水旅行手札</a></h2>
+								
+								</header>
+							</section>
+
+						<!-- Mini Posts -->
+						<section>
+							<div class="mini-posts">
+								<h2>附近景點</h2>
+								<!-- Mini Post -->
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot3_13') }}">天使熱愛的生活</a></h3>
+											<p>距離44公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot3_13') }}" class="image"><img src="static/images/天使熱愛的生活01.jpg" alt="" /></a>
+									</article>
+
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot4_13') }}">之間茶食器</a></h3>
+											<p>距離79公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot4_13') }}" class="image"><img src="static/images/之間茶食器 01.jpg" alt="" /></a>
+									</article>
+
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot5_2') }}">浪花丸</a></h3>
+											<p>距離85公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot5_2') }}" class="image"><img src="static/images/浪花丸1.jpg" alt="" /></a>
+									</article>
+
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot4_5') }}">水灣BALI 景觀餐廳-榕堤店</a></h3>
+											<p>距離96公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot4_5') }}" class="image"><img src="static/images/水灣BALI 景觀餐廳-榕堤店1.jpg" alt="" /></a>
+									</article>
+									
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot3_5') }}">Ancre café安克黑咖啡</a></h3>
+											<p>距離102公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot3_5') }}" class="image"><img src="static/images/Ancre café安克黑咖啡2.jpg" alt="" /></a>
+									</article>
+									
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot5_1') }}">朝日夫婦</a></h3>
+											<p>距離102公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot5_1') }}" class="image"><img src="static/images/朝日夫婦1.jpg" alt="" /></a>
+									</article>
+								
+							</div>
+						</section>
+						
+						<!-- Footer -->
+							<section id="footer">
+								<ul class="icons">
+									<li><a href="https://www.facebook.com/tamsuiproject" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/tamsuiproject/"  target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<a href="#top" class=" button large " id="BackTop">最上面</a>
+								</ul>
+								
+								<p >專題於2022年製作</p>
+							</section>
+
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/browser.min.js"></script>
+			<script src="static/js/breakpoints.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js"></script>
+			<script>
+				var imgArray = [
+				'https://drive.google.com/uc?export=view&id=18njiRwppVLLKM93Z8it2zKrRloulNBzg',
+				'https://drive.google.com/uc?export=view&id=1yu5BC7TEvC9q6IiU0YXis_00n2G2VB7s',
+
+			],
+				curIndex = 0;
+				imgDuration = 3000;
+			
+			function slideShow() {
+				document.getElementById('slider').className += "fadeOut";
+				setTimeout(function() {
+					document.getElementById('slider').src = imgArray[curIndex];
+					document.getElementById('slider').className = "";
+				},1000);
+				curIndex++;
+				if (curIndex == imgArray.length) { curIndex = 0; }
+				setTimeout(slideShow, imgDuration);
+			}
+			slideShow();
+		</script>
+		 <script>
+            $(function(){
+                $('#BackTop').click(function(){ 
+                    $('html,body').animate({scrollTop:0}, 333);
+                });
+                $(window).scroll(function() {
+                    if ( $(this).scrollTop() > 300 ){
+                        $('#BackTop').fadeIn(222);
+                    } else {
+                        $('#BackTop').stop().fadeOut(222);
+                    }
+                }).scroll();
+            });
+        </script>
+		
+<script>
+	var slideIndex = 1;
+	showDivs(slideIndex);
+	
+	function plusDivs(n) {
+	  showDivs(slideIndex += n);
+	}
+	
+	function currentDiv(n) {
+	  showDivs(slideIndex = n);
+	}
+	
+	function showDivs(n) {
+	  var i;
+	  var x = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("demo");
+	  if (n > x.length) {slideIndex = 1}    
+	  if (n < 1) {slideIndex = x.length} ;
+	  for (i = 0; i < x.length; i++) {
+		 x[i].style.display = "none";  
+	  }
+	  for (i = 0; i < dots.length; i++) {
+		 dots[i].className = dots[i].className.replace(" w3-red", "");
+	  }
+	  x[slideIndex-1].style.display = "block";  
+	  dots[slideIndex-1].className += " w3-red";
+		}
+	</script>
+	</body>
+</html>
