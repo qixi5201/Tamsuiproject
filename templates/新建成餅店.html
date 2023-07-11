@@ -1,0 +1,275 @@
+{% import "bootstrap/wtf.html" as wtf %}
+<!DOCTYPE HTML>
+
+
+<html>
+	<head>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FFCGET6HE8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FFCGET6HE8');
+</script>
+		<title>淡水旅行手札-新建成餅店</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/main.css" />
+		<link rel="stylesheet" href="/lib/w3.css">
+		<style>
+			html {
+					scroll-behavior: smooth;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+						<article class="post">
+							<header>
+								<div class="title">
+									<h2>新建成餅店</h2>
+									<h3>芝麻蛋黃大餅</h3>
+								</div>
+							
+							</header>
+
+							<span class="image main" style="padding:5px 5px; width: calc(100%);">
+								<div class="w3-content" style="max-width:800px">
+									<img class="mySlides" src="static/images/新建成餅店.jpg" style="width:100%">
+									 
+								</div>
+								  <div class="w3-center" style="margin-top: 20px;">
+									<center>
+									<button class="w3-btn demo" onclick="currentDiv(1)">1</button> 
+								 
+									</center>
+								  </div>
+							</span>
+							<span >
+								<p>
+									新建成餅店是淡水老街必買的伴手禮店，在老街內路過必定會聞到從餅店散發出來的香味，新建成餅店 就在淡水老街裡，從捷運站出站後步行5分鐘就會抵達，每天出爐的芝麻蛋黃大餅，幾乎是大家必買的商品。這間餅店是傳統餅舖的裝潢，經過了數年店家也沒有重新設計店面，餅店除了最多人買的芝麻大餅還有綠豆椪、梅子糕餅、咖哩餅、沙其馬等等，無論何時店內都有客人，就連淡水人也都很愛這間老字號的餅店。在舊餅店的斜對面開了一間新的分店，因為這間分店的設計及裝飾，從門口就能看見粉紅櫻花樹的造景，搭配上浪漫的玫瑰花牆，還有入口的古典鏤空門面，整體環境相當有質感，因此變成了許多人喜歡打卡拍照的新景點，也同時是許多新人喜歡購買喜餅的店家。即便經過數十年，味道依舊美好完全沒有變，就算沒有訂婚，也可以來新建成餅店買他們的餅來嘗試看看。
+								</p>
+							</span>
+							<div class="iframe-rwd">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.017442468775!2d121.44086691484478!3d25.168888883909368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a558ff8b173d%3A0xe72a9b5132dc2530!2z5paw5bu65oiQ6aSF5bqX!5e0!3m2!1szh-TW!2stw!4v1658147448142!5m2!1szh-TW!2stw" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							</div><footer>
+
+								
+								<ul class="actions">
+									<br>
+								</ul>
+							
+								<ul class="stats">
+									<li><a href="#">景點</a></li>
+									
+									
+								</ul>
+							</footer>
+						</article>
+						<article class="post">
+							<header>
+								<div class="title">
+									<h2>留言區</h2>
+									<h3>說說你的想法</h3>
+								</div>
+							
+							</header>
+							<form method="post" >
+								{{ wtf.quick_form(form) }}
+							</form>
+							
+							
+						</article>
+
+						<article class="post">
+							<header>
+								<div class="title">
+									<center>
+										<h2>留言版</h2>
+									</center>
+								</div>
+							
+							</header>
+						{% for item in messages%}
+						<p>
+							{{  item.name }}<br>
+							{{  item.body }}<br>
+							{{  item.timestamp }}<br></p>
+							<hr>
+						{% endfor %}
+						{% with messages = get_flashed_messages() %}
+						{% if messages %}
+						<ul class="flash">
+							{% for message in messages %}
+								<li>{{ message }}</li>
+								
+							{% endfor %}
+						</ul>
+						{% endif %}
+						{% endwith %}
+						</article>
+					</div>
+
+				<!-- Sidebar -->
+					<section id="sidebar">
+
+						<!-- Intro -->
+							<section id="intro">
+								
+								<header>
+									<h2><a href="{{ url_for('index') }}" >淡水旅行手札</a></h2>
+								
+								</header>
+							</section>
+
+						<!-- Mini Posts -->
+						<section>
+							<div class="mini-posts">
+								<h2>附近景點</h2>
+								<!-- Mini Post -->
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot1_12') }}">小時候彈珠堂 </a></h3>
+											<p>距離23公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot1_12') }}" class="image"><img src="static/images/小時候彈珠堂.jpg" alt="" /></a>
+									</article>
+
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot4_1') }}">魚見浜燒</a></h3>
+											<p>距離35公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot4_1') }}" class="image"><img src="static/images/魚見浜燒2.jpg" alt="" /></a>
+									</article>
+
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot4_7') }}">黑殿飯店</a></h3>
+											<p>距離37公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot4_7') }}" class="image"><img src="static/images/黑殿飯店2.jpg" alt="" /></a>
+									</article>
+
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot4_20') }}">雞道樂</a></h3>
+											<p>距離47公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot4_20') }}" class="image"><img src="static/images/雞道樂.jpg" alt="" /></a>
+									</article>
+									
+									<article class="mini-post">
+										<header>
+											<h3><a href="{{ url_for('spot4_14') }}">Pallet Bistro•木棧板餐廳</a></h3>
+											<p>距離62公尺</p>
+											
+										</header>
+										<a href="{{ url_for('spot4_14') }}" class="image"><img src="static/images/Pallet bistro木棧板餐廳01.jpg" alt="" /></a>
+									</article>
+								
+							</div>
+						</section>
+
+
+						
+						<!-- Footer -->
+							<section id="footer">
+								<ul class="icons">
+									<li><a href="https://www.facebook.com/tamsuiproject" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/tamsuiproject/"  target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<a href="#top" class=" button large " id="BackTop">最上面</a>
+								</ul>
+								
+								<p >專題於2022年製作</p>
+							</section>
+
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/browser.min.js"></script>
+			<script src="static/js/breakpoints.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js"></script>
+			<script>
+				var imgArray = [
+				'https://drive.google.com/uc?export=view&id=1vb-viUp1MNgF99T8KNuySTFEdn1336a1',
+
+			],
+				curIndex = 0;
+				imgDuration = 3000;
+			
+			function slideShow() {
+				document.getElementById('slider').className += "fadeOut";
+				setTimeout(function() {
+					document.getElementById('slider').src = imgArray[curIndex];
+					document.getElementById('slider').className = "";
+				},1000);
+				curIndex++;
+				if (curIndex == imgArray.length) { curIndex = 0; }
+				setTimeout(slideShow, imgDuration);
+			}
+			slideShow();
+		</script>
+		 <script>
+            $(function(){
+                $('#BackTop').click(function(){ 
+                    $('html,body').animate({scrollTop:0}, 333);
+                });
+                $(window).scroll(function() {
+                    if ( $(this).scrollTop() > 300 ){
+                        $('#BackTop').fadeIn(222);
+                    } else {
+                        $('#BackTop').stop().fadeOut(222);
+                    }
+                }).scroll();
+            });
+        </script>
+		
+
+<script>
+	var slideIndex = 1;
+	showDivs(slideIndex);
+	
+	function plusDivs(n) {
+	  showDivs(slideIndex += n);
+	}
+	
+	function currentDiv(n) {
+	  showDivs(slideIndex = n);
+	}
+	
+	function showDivs(n) {
+	  var i;
+	  var x = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("demo");
+	  if (n > x.length) {slideIndex = 1}    
+	  if (n < 1) {slideIndex = x.length} ;
+	  for (i = 0; i < x.length; i++) {
+		 x[i].style.display = "none";  
+	  }
+	  for (i = 0; i < dots.length; i++) {
+		 dots[i].className = dots[i].className.replace(" w3-red", "");
+	  }
+	  x[slideIndex-1].style.display = "block";  
+	  dots[slideIndex-1].className += " w3-red";
+		}
+	</script>
+	</body>
+</html>
