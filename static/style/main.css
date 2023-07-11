@@ -1,0 +1,147 @@
+/* tooltip style */
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: #2b3c56;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.d3-tip .date {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.d3-tip .mark {
+  display: inline-flex;
+  width: 4px;
+  height: 4px;
+  border-radius: 99%;
+  margin: 0;
+  vertical-align: middle;
+  margin-right: 3px;
+}
+
+.d3-tip .Facebook-mark {
+  background-color: #0daeff;
+}
+
+.d3-tip .Google-mark {
+  background-color: #f85672;
+}
+
+.d3-tip:after {
+  /* Creates a small triangle extender for the tooltip */
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 10px;
+  width: 16px;
+  height: 12px;
+  color: #2b3c56;
+  content: '\25BC';
+  position: absolute;
+  text-align: center;
+}
+
+.d3-tip.n:after {
+  /* Style northward tooltips differently */
+  left: 50%;
+  bottom: 4px;
+  -webkit-transform: translate(-50%, 100%);
+  transform: translate(-50%, 100%);
+}
+
+/* chart container style */
+#root {
+  width: 50%;
+  margin-top: 50px;
+}
+
+#pie {
+  width: 30%;
+  margin-top: 50px;
+}
+
+#bubble {
+  width: 50%;
+  margin-top: 50px;
+}
+
+#bubble .chart-title {
+  font-size: 32px;
+  opacity: 0.6;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+}
+
+.chart-title {
+  margin-left: 30px;
+}
+
+.mark {
+  display: -webkit-inline-box;
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-right: 30px;
+  margin-top: 32px;
+  font-size: 20px;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 99%;
+  margin-right: 10px;
+}
+
+.google-mark {
+  background-color: #f85672;
+}
+
+.facebook-mark {
+  background-color: #0daeff;
+}
+
+.desktop-mark {
+  background-color: #ffb854;
+}
+
+.mobile-mark {
+  background-color: #0daeff;
+}
+
+.tablet-mark {
+  background-color: #f85672;
+}
+
+.tv-mark {
+  background-color: #08c9cc;
+}
+
+/* chart style */
+.xaxis,
+.yaxis {
+  color: #334056;
+  opacity: 0.5;
+}
+
+.xaxis line,
+.xaxis path,
+.yaxis line,
+.yaxis path {
+  stroke: #334056;
+}
+
+.xaxis text,
+.yaxis text {
+  fill: #334056;
+}
+
+.line {
+  stroke-width: 2;
+  fill: none;
+}
