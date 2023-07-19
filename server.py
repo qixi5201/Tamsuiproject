@@ -10,7 +10,7 @@ from  sqlalchemy.sql.expression import func
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:rootroot@localhost:3306/p"
+app.config['SQLALCHEMY_DATABASE_URI'] = ""
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=True
 db = SQLAlchemy(app)
 Migrate(app,db)
